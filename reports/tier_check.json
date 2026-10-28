@@ -12,41 +12,41 @@
  ],
  "30min": {
   "setups": 60,
-  "same_result": 46,
-  "stopped_fine": 9,
+  "same_result": 44,
+  "stopped_fine": 8,
   "stopped_coarse": 5,
-  "filled_fine": 20,
+  "filled_fine": 19,
   "filled_coarse": 12,
-  "filled_only_on_coarse": 1,
-  "filled_only_on_fine": 9,
-  "avg_r_fine": 0.468,
+  "filled_only_on_coarse": 3,
+  "filled_only_on_fine": 10,
+  "avg_r_fine": 0.539,
   "avg_r_coarse": 0.329,
-  "avg_r_gap_when_both_filled": -0.186,
-  "both_filled": 11
+  "avg_r_gap_when_both_filled": -0.147,
+  "both_filled": 9
  },
  "60min": {
   "setups": 60,
-  "same_result": 41,
-  "stopped_fine": 9,
+  "same_result": 43,
+  "stopped_fine": 8,
   "stopped_coarse": 2,
-  "filled_fine": 20,
+  "filled_fine": 19,
   "filled_coarse": 10,
   "filled_only_on_coarse": 1,
-  "filled_only_on_fine": 11,
-  "avg_r_fine": 0.468,
+  "filled_only_on_fine": 10,
+  "avg_r_fine": 0.539,
   "avg_r_coarse": 1.154,
-  "avg_r_gap_when_both_filled": 0.122,
+  "avg_r_gap_when_both_filled": 0.13,
   "both_filled": 9
  },
  "setups": [
   {
    "id": "2026-10-19-PLTR-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "target1",
     "filled": true,
     "r": 2.0,
-    "r_hold_t2": 1.83
+    "r_hold_t2": 1.8
    },
    "30min": {
     "result": "no_fill",
@@ -63,7 +63,7 @@
   },
   {
    "id": "2026-10-19-PLTR-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -85,12 +85,12 @@
   },
   {
    "id": "2026-10-19-TSLA-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "target1",
     "filled": true,
     "r": 2.0,
-    "r_hold_t2": 7.71
+    "r_hold_t2": 7.69
    },
    "30min": {
     "result": "no_fill",
@@ -107,7 +107,7 @@
   },
   {
    "id": "2026-10-19-TSLA-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -129,7 +129,7 @@
   },
   {
    "id": "2026-10-19-META-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -151,12 +151,12 @@
   },
   {
    "id": "2026-10-19-META-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "target1",
     "filled": true,
     "r": 2.0,
-    "r_hold_t2": -1.05
+    "r_hold_t2": -1.25
    },
    "30min": {
     "result": "target1",
@@ -173,7 +173,7 @@
   },
   {
    "id": "2026-10-19-SPY-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_fill",
     "filled": false,
@@ -195,7 +195,7 @@
   },
   {
    "id": "2026-10-19-SPY-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -217,12 +217,12 @@
   },
   {
    "id": "2026-10-20-AMZN-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
-    "result": "stopped",
-    "filled": true,
-    "r": -1.07,
-    "r_hold_t2": -1.07
+    "result": "failed_before_retest",
+    "filled": false,
+    "r": null,
+    "r_hold_t2": null
    },
    "30min": {
     "result": "stopped",
@@ -239,12 +239,12 @@
   },
   {
    "id": "2026-10-20-AMZN-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
-    "result": "failed_before_retest",
-    "filled": false,
-    "r": null,
-    "r_hold_t2": null
+    "result": "stopped",
+    "filled": true,
+    "r": -1.4,
+    "r_hold_t2": -1.4
    },
    "30min": {
     "result": "no_trigger",
@@ -261,7 +261,7 @@
   },
   {
    "id": "2026-10-20-TSLA-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_fill",
     "filled": false,
@@ -283,7 +283,7 @@
   },
   {
    "id": "2026-10-20-TSLA-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -305,7 +305,7 @@
   },
   {
    "id": "2026-10-20-META-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -327,7 +327,7 @@
   },
   {
    "id": "2026-10-20-META-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_fill",
     "filled": false,
@@ -349,12 +349,12 @@
   },
   {
    "id": "2026-10-20-SPY-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "target1",
     "filled": true,
     "r": 2.0,
-    "r_hold_t2": 0.85
+    "r_hold_t2": 0.78
    },
    "30min": {
     "result": "target1",
@@ -371,7 +371,7 @@
   },
   {
    "id": "2026-10-20-SPY-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -393,12 +393,12 @@
   },
   {
    "id": "2026-10-21-META-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "target1",
     "filled": true,
     "r": 2.0,
-    "r_hold_t2": 0.71
+    "r_hold_t2": 0.33
    },
    "30min": {
     "result": "target1",
@@ -415,7 +415,7 @@
   },
   {
    "id": "2026-10-21-META-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -437,7 +437,7 @@
   },
   {
    "id": "2026-10-21-GOOGL-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,
@@ -459,7 +459,7 @@
   },
   {
    "id": "2026-10-21-GOOGL-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_fill",
     "filled": false,
@@ -481,7 +481,7 @@
   },
   {
    "id": "2026-10-21-AMZN-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "stopped",
     "filled": true,
@@ -503,12 +503,12 @@
   },
   {
    "id": "2026-10-21-AMZN-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
-    "result": "stopped",
-    "filled": true,
-    "r": -1.28,
-    "r_hold_t2": -1.28
+    "result": "failed_before_retest",
+    "filled": false,
+    "r": null,
+    "r_hold_t2": null
    },
    "30min": {
     "result": "stopped",
@@ -525,12 +525,12 @@
   },
   {
    "id": "2026-10-21-SPY-call",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "stopped",
     "filled": true,
-    "r": -1.01,
-    "r_hold_t2": -1.01
+    "r": -1.08,
+    "r_hold_t2": -1.08
    },
    "30min": {
     "result": "failed_before_retest",
@@ -547,7 +547,7 @@
   },
   {
    "id": "2026-10-21-SPY-put",
-   "fine_bar_seconds": 300,
+   "fine_bar_seconds": 120,
    "fine": {
     "result": "no_trigger",
     "filled": false,

@@ -1,0 +1,454 @@
+{
+ "what": "published setups with IBKR 2-min bars, rescored on Webull 1-min bars aggregated to 2-min",
+ "setups": 40,
+ "same_result": 40,
+ "same_r": 38,
+ "close_diff_bps": {
+  "bars": 7800,
+  "median": 0.03,
+  "p95": 1.5,
+  "max": 11.65
+ },
+ "setups_detail": [
+  {
+   "id": "2026-10-22-GOOGL-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-22-GOOGL-put",
+   "ibkr": [
+    "target1",
+    2.0
+   ],
+   "webull": [
+    "target1",
+    2.0
+   ]
+  },
+  {
+   "id": "2026-10-22-AMZN-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-22-AMZN-put",
+   "ibkr": [
+    "no_fill",
+    null
+   ],
+   "webull": [
+    "no_fill",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-22-TSLA-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-22-TSLA-put",
+   "ibkr": [
+    "stopped",
+    -1.22
+   ],
+   "webull": [
+    "stopped",
+    -1.22
+   ]
+  },
+  {
+   "id": "2026-10-22-SPY-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-22-SPY-put",
+   "ibkr": [
+    "no_fill",
+    null
+   ],
+   "webull": [
+    "no_fill",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-23-NVDA-call",
+   "ibkr": [
+    "stopped",
+    -1.16
+   ],
+   "webull": [
+    "stopped",
+    -1.17
+   ]
+  },
+  {
+   "id": "2026-10-23-NVDA-put",
+   "ibkr": [
+    "failed_before_retest",
+    null
+   ],
+   "webull": [
+    "failed_before_retest",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-23-META-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-23-META-put",
+   "ibkr": [
+    "failed_before_retest",
+    null
+   ],
+   "webull": [
+    "failed_before_retest",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-23-PLTR-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-23-PLTR-put",
+   "ibkr": [
+    "failed_before_retest",
+    null
+   ],
+   "webull": [
+    "failed_before_retest",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-23-SPY-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-23-SPY-put",
+   "ibkr": [
+    "target1",
+    2.0
+   ],
+   "webull": [
+    "target1",
+    2.0
+   ]
+  },
+  {
+   "id": "2026-10-26-TSLA-call",
+   "ibkr": [
+    "no_fill",
+    null
+   ],
+   "webull": [
+    "no_fill",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-26-TSLA-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-26-NVDA-call",
+   "ibkr": [
+    "target1",
+    2.0
+   ],
+   "webull": [
+    "target1",
+    2.0
+   ]
+  },
+  {
+   "id": "2026-10-26-NVDA-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-26-META-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-26-META-put",
+   "ibkr": [
+    "stopped",
+    -1.05
+   ],
+   "webull": [
+    "stopped",
+    -1.05
+   ]
+  },
+  {
+   "id": "2026-10-26-SPY-call",
+   "ibkr": [
+    "failed_before_retest",
+    null
+   ],
+   "webull": [
+    "failed_before_retest",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-26-SPY-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-27-TSLA-call",
+   "ibkr": [
+    "no_fill",
+    null
+   ],
+   "webull": [
+    "no_fill",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-27-TSLA-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-27-META-call",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-27-META-put",
+   "ibkr": [
+    "target1",
+    2.0
+   ],
+   "webull": [
+    "target1",
+    2.0
+   ]
+  },
+  {
+   "id": "2026-10-27-PLTR-call",
+   "ibkr": [
+    "failed_before_retest",
+    null
+   ],
+   "webull": [
+    "failed_before_retest",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-27-PLTR-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-27-SPY-call",
+   "ibkr": [
+    "stopped",
+    -1.65
+   ],
+   "webull": [
+    "stopped",
+    -1.65
+   ]
+  },
+  {
+   "id": "2026-10-27-SPY-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-28-AVGO-call",
+   "ibkr": [
+    "target1",
+    2.0
+   ],
+   "webull": [
+    "target1",
+    2.0
+   ]
+  },
+  {
+   "id": "2026-10-28-AVGO-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-28-AMD-call",
+   "ibkr": [
+    "target1",
+    2.0
+   ],
+   "webull": [
+    "target1",
+    2.0
+   ]
+  },
+  {
+   "id": "2026-10-28-AMD-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  },
+  {
+   "id": "2026-10-28-NVDA-call",
+   "ibkr": [
+    "stopped",
+    -1.1
+   ],
+   "webull": [
+    "stopped",
+    -1.1
+   ]
+  },
+  {
+   "id": "2026-10-28-NVDA-put",
+   "ibkr": [
+    "session_close",
+    0.16
+   ],
+   "webull": [
+    "session_close",
+    0.13
+   ]
+  },
+  {
+   "id": "2026-10-28-SPY-call",
+   "ibkr": [
+    "target1",
+    2.0
+   ],
+   "webull": [
+    "target1",
+    2.0
+   ]
+  },
+  {
+   "id": "2026-10-28-SPY-put",
+   "ibkr": [
+    "no_trigger",
+    null
+   ],
+   "webull": [
+    "no_trigger",
+    null
+   ]
+  }
+ ]
+}

@@ -44,7 +44,7 @@ def summary_table(s: dict) -> str:
     return "| Measure | Result |\n| --- | --- |\n" + "".join(f"| {a} | {b} |\n" for a, b in _rows(s))
 
 
-TIER_NAMES = {"published": "Published cards", "rebuilt_5min": "Rebuilt, 5-min bars",
+TIER_NAMES = {"published": "Published cards", "rebuilt_2min": "Rebuilt, 2-min bars", "rebuilt_5min": "Rebuilt, 5-min bars",
               "rebuilt_30min": "Rebuilt, 30-min bars", "rebuilt_60min": "Rebuilt, 60-min bars"}
 
 

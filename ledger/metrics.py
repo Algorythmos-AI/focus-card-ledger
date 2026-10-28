@@ -15,10 +15,12 @@ from .common import ROOT, read_jsonl, wilson
 
 POLICIES = ("card", "five_min", "hold_t2")
 SLICES = ("symbol", "side", "bias", "rank", "confidence", "level_type", "gap", "open_gap", "weekday", "distance",
-          "backfilled", "bar_size", "card_source")
+          "backfilled", "bar_size", "bar_source", "card_source")
 # Quality tiers. Published cards are the headline; rebuilt history is kept apart and split by bar size, because
-# 30- and 60-minute bars miss many retest fills (reports/tier_check.json measures by how much).
+# 30- and 60-minute bars miss many retest fills (reports/tier_check.json measures by how much). Rebuilt 2-minute
+# bars come from Webull and score the same as IBKR's (reports/source_check.json).
 TIERS = {"published": lambda r: r["card_source"] == "published",
+         "rebuilt_2min": lambda r: r["card_source"] == "rebuilt" and r["bar_size"] == "2min",
          "rebuilt_5min": lambda r: r["card_source"] == "rebuilt" and r["bar_size"] == "5min",
          "rebuilt_30min": lambda r: r["card_source"] == "rebuilt" and r["bar_size"] == "30min",
          "rebuilt_60min": lambda r: r["card_source"] == "rebuilt" and r["bar_size"] == "60min"}
@@ -61,6 +63,7 @@ def flatten(p, o, opt=None) -> dict:
     r["gap"] = _gap(p)
     r["bar_size"] = f'{o["bars"]["bar_seconds"] // 60}min'
     r["card_source"] = p.get("card_source", "published")
+    r["bar_source"] = o["bars"]["source"]
     r["weekday"] = date.fromisoformat(p["session"]).strftime("%a")
     r["open_gap"] = _open_gap(p, o["day"]["open"])
     d = abs(p["level"] - p["prior_close"]) / p["atr"] if p["atr"] else None

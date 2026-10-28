@@ -1,9 +1,13 @@
 # Rebuilt history (backfilled 28 Oct 2026)
 
 The live ledger starts on 19 Oct 2026, the first published card. To get a longer record, the card was re-picked
-for every session from 4 Mar to 16 Oct 2026 (158 sessions, 1,256 setups) and scored with the same scorer as
-the live records. Each of these records carries `card_source: "rebuilt"`, `backfilled: true` and a `rebuild`
-note listing the inputs it had. They never feed the headline numbers in the README.
+for every session from 4 Mar to 16 Oct 2026 (158 sessions, 1,256 setups) and scored with the same scorer as the
+live records. Each of these records carries:
+- `card_source: "rebuilt"`
+- `backfilled: true`
+- a `rebuild` note listing the inputs it had.
+
+They never feed the headline numbers in the README.
 
 ## How the cards were rebuilt
 
@@ -22,68 +26,78 @@ There was no pre-market snapshot for any rebuilt day, so every rebuilt setup has
 
 `--check` re-picked the 8 sessions that have a published card (19–28 Oct):
 
-- With the option-volume input, all 8 rebuilt cards were identical to the published ones: the same names, ranks, levels and targets.
-- Without it, which is the case for every day before 12 Oct, 29 of the 32 names matched (91%). Every matched name had the same levels and bias, but ranks sometimes moved.
-- One more check: the 2026-10-12 levels rebuilt from the daily file differ from the saved file by a few cents. The daily file was pulled during the 9 Oct session, so its last bar is not final. Sessions up to 9 Oct only use bars that were already final.
+- **With the option-volume input:** all 8 rebuilt cards were identical to the published ones, with the same names, ranks, levels and targets.
+- **Without it** (the case for every day before 12 Oct): 29 of the 32 names matched (91%). Every matched name had the same levels and bias, though ranks sometimes moved.
+- **Levels for 12 Oct:** levels rebuilt from the daily file differ from the saved file by a few cents. The daily file was pulled during the 9 Oct session, so its last bar is not final. Sessions up to 9 Oct only use bars that were already final.
 
 ## Bars, by quality tier
 
-IBKR keeps fine bars for a short time only, so the rebuilt days are scored on what was still available:
-
 | Tier | Sessions | Bars |
 | --- | --- | --- |
-| Published | 19–28 Oct | 2-min (22–28 Oct), 5-min (19–21 Oct) |
-| Rebuilt, 5-min | 13–16 Oct | IBKR 5-min |
-| Rebuilt, 30-min | 14 Jul – 12 Oct | IBKR 30-min |
-| Rebuilt, 60-min | 4 Mar – 13 Jul | IBKR hourly (options-tab/bars_hourly_Mar-Oct2026_10names.json) |
+| Published | 19–28 Oct | IBKR 2-min (22–28 Oct); Webull 1-min aggregated to 2-min (19–21 Oct) |
+| Rebuilt, 2-min | 4 May – 16 Oct | Webull 1-min aggregated to 2-min, aligned to 09:30 ET (`tools/webull_bars.py`) |
+| Rebuilt, 60-min | 4 Mar – 1 May | IBKR hourly (options-tab/bars_hourly_Mar-Oct2026_10names.json) |
 
-### What coarse bars get wrong
+Webull's OpenAPI keeps minute bars for 180 days, so 4 May is as far back as 2-minute bars go. Sam claimed the
+free "Nasdaq Basic – Non Display" OpenAPI quote permission on 28 Oct 2026 to unlock them.
 
-`tools/tier_check.py` scored the 60 published setups three ways: on their fine bars, on 30-minute bars and on
-60-minute bars (`reports/tier_check.json`).
+### Do Webull bars score the same as IBKR's?
 
-| Measure | Fine bars | 30-min | 60-min |
-| --- | --- | --- | --- |
-| Same result as fine | – | 46 of 60 | 41 of 60 |
-| Filled | 20 | 12 | 10 |
-| Stopped | 9 | 5 | 2 |
-| Average R of the filled setups | +0.47R | +0.33R | +1.15R |
+`tools/source_check.py` (`reports/source_check.json`) re-scored the 40 published setups that have IBKR
+2-minute bars, this time on Webull bars:
 
-So on 30- and 60-minute bars, about half the retest fills are missed. Stops are missed even more often, because the stop is a close through the level and a long bar hides the short closes inside it. **Treat the stop rate, win rate and average R of the coarse tiers as optimistic.** Some facts don't depend on bar size, because they come from the day's open, high, low and close:
+- **Same result** (trigger, fill, target or stop) on all 40.
+- **R matched exactly on 38.** The other two differed by 0.01R and 0.03R.
+- **2-minute closes** matched to a median of 0.03 basis points (95th percentile 1.5 bp, over 7,800 bars).
 
-- whether the bias was right;
-- where the stock opened;
-- whether the level was crossed at all.
+### What coarse bars got wrong
 
-The trigger rate is a little low on coarse bars too, because a 30-minute close beyond the level is harder to get than a 2-minute one.
+Before the Webull bars, the rebuilt history used 30- and 60-minute IBKR bars. Re-scoring the same rebuilt
+setups on 2-minute bars gave:
+
+| Setups first scored on | Setups | Filled (coarse → 2-min) | Stopped (coarse → 2-min) | Average R (coarse → 2-min) |
+| --- | --- | --- | --- | --- |
+| 30-min bars (14 Jul – 12 Oct) | 511 | 86 → 140 | 15 → 68 | +0.94R → +0.29R |
+| 60-min bars (4 May – 13 Jul) | 382 | 60 → 114 | 7 → 57 | +1.04R → +0.29R |
+
+Coarse bars hide the short closes through the stop, so they made the card look about three times better than it
+was. **The 60-minute tier that remains (4 Mar – 1 May) is optimistic in the same way.** Read only its bias,
+open and trigger facts, which come from the day's open, high, low and close. `reports/tier_check.json` shows the
+same effect on the published days.
 
 ## What the history says (as of 28 Oct 2026)
 
-These come from the 1,256 rebuilt setups. They are history, not proof: the setups on one day move together, so the real uncertainty is wider than the ranges shown.
+These come from the 925 rebuilt setups with 2-minute bars, 4 May – 16 Oct. They are history, not proof: setups on
+one day move together, so the real uncertainty is wider than the ranges shown.
 
-- **Bias:** the card's bias was right on 40% of the name-days (95% range 37–43%, 616 name-days):
-  - "Hold support" was right 37% of the time.
-  - "Breakout watch" was right 44% of the time.
-  - Live cards so far: 44% (14 of 32).
-- **The open settles most bias calls.** When the stock opened over the ceiling, breakout bias was right 74% of the time. When it opened under the floor, support bias was right 4% of the time. That is close to true by definition, but it is known at 09:30, before the first allowed entry at 09:35.
-- **Card score does not rank setups yet.** In the history, the information coefficient (how well the score orders the outcomes) is −0.12 for the card score against R, and −0.11 for rank. On the live cards it is +0.32, from 22 trades. More live days will settle which is right.
-- **How far the level sits from the close:**
-  - Levels under 0.5 ATR from the close triggered 51% of the time.
-  - Levels 0.5–1 ATR away triggered 21% of the time.
-  - Levels more than 1 ATR away triggered 6% of the time.
-- **Results by name:** PLTR and TSLA had the weakest results per setup (+0.56R and +0.81R, coarse bars). AMZN, META and NVDA had the best (+1.3R to +1.4R). All of these are rough numbers.
+- **Small positive edge on the stock, before costs.** Of 925 setups, 51% triggered and 267 filled.
+  - Win rate: T1 was hit before the stop 43% of the time (95% range 37–49%), and 51% were stopped.
+  - Average R: +0.25 on the card's exits, +0.22 with the 5-minute rule, +0.18 holding for T2. Profit factors were 1.39, 1.47 and 1.21.
+  - At 2R targets, a 33% win rate breaks even, so 43% clears it. Option costs and the −25% option stop are not included.
+- **T2 is rarely reached:** 5% of fills.
+- **The bias is wrong more often than right.** It was right on 40% of name-days (95% range 36–44%). "Hold support" was right 37% of the time, "breakout watch" 44%.
+- **The open settles most bias calls.** When the stock opened over the ceiling, breakout bias was right 74% of the time. When it opened under the floor, support bias was right 3%. Both are known at 09:30, before the first allowed entry at 09:35.
+- **Card score and rank don't rank setups.** The information coefficient (how well the score orders the outcomes) is +0.05 for score against R and +0.04 for rank. On the live cards it is +0.23, from 21 trades.
+- **Distance from the close decides whether a level is reached.** Levels under 0.5 ATR away triggered 57% of the time, 0.5–1 ATR away 26%, and more than 1 ATR away 6%.
+- **By name:** NVDA and TSLA did best (+0.89R and +0.66R per fill). PLTR (+0.04R) and GOOGL (+0.18R) did worst.
+- **By weekday:** Monday and Wednesday did best (+0.65R and +0.70R). Friday was near zero (+0.08R).
 
 ## Option prices before 28 Oct
 
-These can't be recovered. IBKR drops an expiry from the option chain the day after it expires. Its contract ids can't be looked up after that, so there are no option bars for the 0DTE contracts on rebuilt days. This was checked on 28 Oct 2026: the oldest SPY expiry listed was 20261028. Option P&L (C) therefore starts on 28 Oct and grows with each live day. The after-close job pulls the option bars the same evening, while the contracts can still be found.
+These can't be recovered:
+- **IBKR** drops an expiry from the option chain the day after it expires, so its contract ids can't be looked up later. On 28 Oct 2026 the oldest SPY expiry listed was 20261028.
+- **Webull's OpenAPI** has no options data in Australia. Sam's app OPRA subscription doesn't carry over to the API, which still answers "subscribe to US_OPTION".
+
+Option P&L (C) therefore starts on 28 Oct and grows each live day. The after-close job pulls the option bars the
+same evening. On 28 Oct they were still there at 21:41 UTC, 1 h 40 m after the close.
 
 ## Reproduce
 
 ```
-python -m ledger.transcript --since <ISO> --out /tmp/m30 --step THIRTY_MINS     # bars from the session transcript
 python tools/rebuild_cards.py --out /tmp/cards --check
 for f in /tmp/cards/2026-*.json; do python -m ledger predict --card $f --backfilled; done
-python -m ledger bars --name SPY --ibkr <file>        # hourly, then 30-min, then 5-min: the finer complete copy wins
+python tools/webull_bars.py --from 2026-05-04 --to 2026-10-21 --out /tmp/wb     # needs WEBULL_APP_KEY/SECRET
+python -m ledger bars --name SPY --ibkr <file>     # IBKR hourly for 4 Mar - 1 May; finer complete copies win
 python -m ledger score --all && python -m ledger scorecard
-python tools/tier_check.py --m30 /tmp/m30
+python tools/source_check.py --webull /tmp/wb && python tools/tier_check.py --m30 /tmp/m30
 ```

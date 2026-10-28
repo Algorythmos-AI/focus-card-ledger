@@ -13,9 +13,9 @@ Research only. Nothing here places or suggests orders.
 
 ## Scorecard
 
-R is measured on the stock, from entry to stop, before option costs. Each rate shows its 95% range. Sessions before 29 Oct 2026 were backfilled after the fact (`backfilled: true`), so they are not proof of a pre-open record. 19-21 Oct use 5-minute bars because IBKR no longer had 2-minute bars for them.
+R is measured on the stock, from entry to stop, before option costs. Each rate shows its 95% range. Sessions before 29 Oct 2026 were backfilled after the fact (`backfilled: true`), so they are not proof of a pre-open record. 19-21 Oct are scored on Webull 1-minute bars joined into 2-minute bars, because IBKR no longer had 2-minute bars for them; on days with both, the two sources give the same results (`reports/source_check.json`).
 
-The headline tables use only cards that were really published (from 19 Oct). The rebuilt history (4 Mar – 16 Oct) sits in its own tables, split by bar size; how it was rebuilt and how far to trust it is in [docs/backfill.md](docs/backfill.md).
+The headline tables use only cards that were really published (from 19 Oct). The rebuilt history (4 Mar – 16 Oct; 2-minute bars from 4 May) sits in its own tables, split by bar size; how it was rebuilt and how far to trust it is in [docs/backfill.md](docs/backfill.md).
 
 <!-- scorecard:start -->
 Last scored session: **2026-10-28** · 8 sessions of published cards · 158 sessions of rebuilt history.
@@ -26,17 +26,17 @@ Last scored session: **2026-10-28** · 8 sessions of published cards · 158 sess
 | --- | --- |
 | Setups published | 64 |
 | Triggered | 56% (36/64; 95% 44–68%) |
-| Filled after the retest | 61% (22/36; 95% 45–75%) |
-| Hit T1 before the stop | 55% (12/22; 95% 35–73%) |
-| Stopped | 41% (9/22; 95% 23–61%) |
-| Reached T2 | 0% (0/22; 95% 0–15%) |
-| Average R, card exits | +0.61R |
-| Average R, 5-minute rule | +0.38R |
-| Average R, hold for T2 | +1.00R |
-| Total R (card / 5-min / T2) | +13.36R / +8.32R / +22.08R |
+| Filled after the retest | 58% (21/36; 95% 42–73%) |
+| Hit T1 before the stop | 57% (12/21; 95% 36–76%) |
+| Stopped | 38% (8/21; 95% 21–59%) |
+| Reached T2 | 0% (0/21; 95% 0–16%) |
+| Average R, card exits | +0.68R |
+| Average R, 5-minute rule | +0.54R |
+| Average R, hold for T2 | +1.06R |
+| Total R (card / 5-min / T2) | +14.24R / +11.29R / +22.26R |
 | Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades |
-| Average best / worst move | +1.76R / -1.13R |
-| Median minutes to T1 | 18 |
+| Average best / worst move | +1.63R / -1.05R |
+| Median minutes to T1 | 19 |
 | Bias read right | 44% (14/32; 95% 28–61%) |
 
 ### Last 20 published sessions
@@ -45,74 +45,74 @@ Last scored session: **2026-10-28** · 8 sessions of published cards · 158 sess
 | --- | --- |
 | Setups published | 64 |
 | Triggered | 56% (36/64; 95% 44–68%) |
-| Filled after the retest | 61% (22/36; 95% 45–75%) |
-| Hit T1 before the stop | 55% (12/22; 95% 35–73%) |
-| Stopped | 41% (9/22; 95% 23–61%) |
-| Reached T2 | 0% (0/22; 95% 0–15%) |
-| Average R, card exits | +0.61R |
-| Average R, 5-minute rule | +0.38R |
-| Average R, hold for T2 | +1.00R |
-| Total R (card / 5-min / T2) | +13.36R / +8.32R / +22.08R |
+| Filled after the retest | 58% (21/36; 95% 42–73%) |
+| Hit T1 before the stop | 57% (12/21; 95% 36–76%) |
+| Stopped | 38% (8/21; 95% 21–59%) |
+| Reached T2 | 0% (0/21; 95% 0–16%) |
+| Average R, card exits | +0.68R |
+| Average R, 5-minute rule | +0.54R |
+| Average R, hold for T2 | +1.06R |
+| Total R (card / 5-min / T2) | +14.24R / +11.29R / +22.26R |
 | Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades |
-| Average best / worst move | +1.76R / -1.13R |
-| Median minutes to T1 | 18 |
+| Average best / worst move | +1.63R / -1.05R |
+| Median minutes to T1 | 19 |
 | Bias read right | 44% (14/32; 95% 28–61%) |
 
 ### Rebuilt history, by bar size
 
 Cards re-picked from saved data with the card's own code (`tools/rebuild_cards.py`). Coarse bars miss many retest fills, so read fill and R numbers here as rough; the bias, trigger and day-range facts hold on any bar size. `reports/tier_check.json` measures the gap.
 
-| Measure | Published cards (19 Oct – 28 Oct) | Rebuilt, 5-min bars (13 Oct – 16 Oct) | Rebuilt, 30-min bars (14 Jul – 12 Oct) | Rebuilt, 60-min bars (4 Mar – 13 Jul) |
-| --- | --- | --- | --- | --- |
-| Setups published | 64 | 32 | 511 | 713 |
-| Triggered | 56% (36/64; 95% 44–68%) | 56% (18/32; 95% 39–72%) | 42% (217/511; 95% 38–47%) | 44% (313/713; 95% 40–48%) |
-| Filled after the retest | 61% (22/36; 95% 45–75%) | 50% (9/18; 95% 29–71%) | 40% (86/217; 95% 33–46%) | 31% (97/313; 95% 26–36%) |
-| Hit T1 before the stop | 55% (12/22; 95% 35–73%) | 44% (4/9; 95% 19–73%) | 57% (49/86; 95% 46–67%) | 65% (63/97; 95% 55–74%) |
-| Stopped | 41% (9/22; 95% 23–61%) | 56% (5/9; 95% 27–81%) | 17% (15/86; 95% 11–27%) | 12% (12/97; 95% 7–20%) |
-| Reached T2 | 0% (0/22; 95% 0–15%) | 22% (2/9; 95% 6–55%) | 5% (4/86; 95% 2–11%) | 2% (2/97; 95% 1–7%) |
-| Average R, card exits | +0.61R | +0.22R | +0.94R | +1.11R |
-| Average R, 5-minute rule | +0.38R | +0.22R | – | – |
-| Average R, hold for T2 | +1.00R | +0.39R | +0.49R | +0.75R |
-| Total R (card / 5-min / T2) | +13.36R / +8.32R / +22.08R | +1.95R / +1.95R / +3.54R | +80.42R / – / +41.86R | +107.25R / – / +72.75R |
-| Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades | – / – / – over 0 trades | – / – / – over 0 trades | – / – / – over 0 trades |
-| Average best / worst move | +1.76R / -1.13R | +1.95R / -0.97R | +2.30R / -0.84R | +2.42R / -0.97R |
-| Median minutes to T1 | 18 | 2 | – | – |
-| Bias read right | 44% (14/32; 95% 28–61%) | 19% (3/16; 95% 7–43%) | 44% (110/250; 95% 38–50%) | 38% (132/349; 95% 33–43%) |
+| Measure | Published cards (19 Oct – 28 Oct) | Rebuilt, 2-min bars (4 May – 16 Oct) | Rebuilt, 60-min bars (4 Mar – 1 May) |
+| --- | --- | --- | --- |
+| Setups published | 64 | 925 | 331 |
+| Triggered | 56% (36/64; 95% 44–68%) | 51% (473/925; 95% 48–54%) | 44% (146/331; 95% 39–50%) |
+| Filled after the retest | 58% (21/36; 95% 42–73%) | 56% (267/473; 95% 52–61%) | 25% (37/146; 95% 19–33%) |
+| Hit T1 before the stop | 57% (12/21; 95% 36–76%) | 43% (115/267; 95% 37–49%) | 65% (24/37; 95% 49–78%) |
+| Stopped | 38% (8/21; 95% 21–59%) | 51% (135/267; 95% 45–56%) | 14% (5/37; 95% 6–28%) |
+| Reached T2 | 0% (0/21; 95% 0–16%) | 5% (14/267; 95% 3–9%) | 0% (0/37; 95% 0–9%) |
+| Average R, card exits | +0.68R | +0.25R | +1.21R |
+| Average R, 5-minute rule | +0.54R | +0.22R | – |
+| Average R, hold for T2 | +1.06R | +0.18R | +0.54R |
+| Total R (card / 5-min / T2) | +14.24R / +11.29R / +22.26R | +66.60R / +58.74R / +47.80R | +44.67R / – / +20.08R |
+| Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades | – / – / – over 0 trades | – / – / – over 0 trades |
+| Average best / worst move | +1.63R / -1.05R | +1.51R / -0.96R | +2.31R / -0.91R |
+| Median minutes to T1 | 19 | 18 | – |
+| Bias read right | 44% (14/32; 95% 28–61%) | 40% (181/454; 95% 36–44%) | 40% (65/161; 95% 33–48%) |
 
-Card score vs R (information coefficient), rebuilt history: -0.122; rank vs R: -0.111.
+Card score vs R (information coefficient), rebuilt history: 0.051; rank vs R: 0.044.
 
 #### Rebuilt history by bias
 
 | Group | Setups | Bias read right | Triggered | Hit T1 before the stop | Average R, card |
 | --- | --- | --- | --- | --- | --- |
-| breakout | 522 | 44% (115/261; 95% 38–50%) | 45% (234/522; 95% 41–49%) | 63% (47/75; 95% 51–73%) | +0.93R |
-| range | 19 | – | 21% (4/19; 95% 8–43%) | 100% (2/2; 95% 34–100%) | +2.00R |
-| support | 715 | 37% (130/354; 95% 32–42%) | 43% (310/715; 95% 40–47%) | 58% (67/115; 95% 49–67%) | +1.01R |
+| breakout | 522 | 44% (116/261; 95% 38–50%) | 51% (266/522; 95% 47–55%) | 47% (61/129; 95% 39–56%) | +0.38R |
+| range | 19 | – | 32% (6/19; 95% 15–54%) | 67% (2/3; 95% 21–94%) | +0.95R |
+| support | 715 | 37% (130/354; 95% 32–42%) | 48% (347/715; 95% 45–52%) | 44% (76/172; 95% 37–52%) | +0.34R |
 
 #### Rebuilt history by where the stock opened
 
 | Group | Setups | Bias read right | Triggered | Hit T1 before the stop | Average R, card |
 | --- | --- | --- | --- | --- | --- |
-| Opened between floor and ceiling | 717 | 37% (130/350; 95% 32–42%) | 38% (274/717; 95% 35–42%) | 56% (66/118; 95% 47–65%) | +0.86R |
-| Opened over the ceiling | 310 | 74% (111/151; 95% 66–80%) | 49% (153/310; 95% 44–55%) | 63% (26/41; 95% 48–76%) | +1.01R |
-| Opened under the floor | 229 | 4% (4/114; 95% 1–9%) | 53% (121/229; 95% 46–59%) | 73% (24/33; 95% 56–85%) | +1.40R |
+| Opened between floor and ceiling | 713 | 38% (131/348; 95% 33–43%) | 46% (326/713; 95% 42–49%) | 45% (86/191; 95% 38–52%) | +0.37R |
+| Opened over the ceiling | 310 | 74% (111/151; 95% 66–80%) | 54% (167/310; 95% 48–59%) | 42% (25/60; 95% 30–54%) | +0.18R |
+| Opened under the floor | 233 | 3% (4/116; 95% 1–8%) | 54% (126/233; 95% 48–60%) | 53% (28/53; 95% 40–66%) | +0.57R |
 
 #### Rebuilt history by card rank
 
 | Group | Setups | Bias read right | Triggered | Hit T1 before the stop | Average R, card |
 | --- | --- | --- | --- | --- | --- |
-| 1 | 316 | 38% (60/158; 95% 31–46%) | 43% (137/316; 95% 38–49%) | 48% (20/42; 95% 33–62%) | +0.83R |
-| 2 | 316 | 42% (66/156; 95% 35–50%) | 45% (142/316; 95% 40–50%) | 54% (32/59; 95% 42–66%) | +0.81R |
-| 3 | 315 | 37% (57/154; 95% 30–45%) | 41% (128/315; 95% 35–46%) | 81% (35/43; 95% 67–90%) | +1.51R |
-| 4 | 309 | 42% (62/147; 95% 34–50%) | 46% (141/309; 95% 40–51%) | 60% (29/48; 95% 46–73%) | +0.88R |
+| 1 | 316 | 38% (60/158; 95% 31–46%) | 49% (155/316; 95% 44–55%) | 47% (34/72; 95% 36–59%) | +0.55R |
+| 2 | 316 | 42% (66/156; 95% 35–50%) | 52% (165/316; 95% 47–58%) | 41% (32/78; 95% 31–52%) | +0.19R |
+| 3 | 315 | 38% (58/154; 95% 30–46%) | 47% (147/315; 95% 41–52%) | 51% (38/74; 95% 40–62%) | +0.48R |
+| 4 | 309 | 42% (62/147; 95% 34–50%) | 49% (152/309; 95% 44–55%) | 44% (35/80; 95% 33–55%) | +0.26R |
 
 #### Rebuilt history by how far the level was from the close
 
 | Group | Setups | Bias read right | Triggered | Hit T1 before the stop | Average R, card |
 | --- | --- | --- | --- | --- | --- |
-| 0.5-1 ATR | 226 | 38% (82/216; 95% 32–45%) | 21% (47/226; 95% 16–27%) | 68% (13/19; 95% 46–85%) | +1.07R |
-| <0.5 ATR | 983 | 40% (242/611; 95% 36–44%) | 51% (498/983; 95% 48–54%) | 59% (102/172; 95% 52–66%) | +0.97R |
-| >1 ATR | 47 | 55% (21/38; 95% 40–70%) | 6% (3/47; 95% 2–17%) | 100% (1/1; 95% 21–100%) | +2.00R |
+| 0.5-1 ATR | 226 | 38% (83/216; 95% 32–45%) | 26% (59/226; 95% 21–32%) | 53% (17/32; 95% 36–69%) | +0.52R |
+| <0.5 ATR | 983 | 40% (243/611; 95% 36–44%) | 57% (557/983; 95% 54–60%) | 45% (122/271; 95% 39–51%) | +0.35R |
+| >1 ATR | 47 | 55% (21/38; 95% 40–70%) | 6% (3/47; 95% 2–17%) | 0% (0/1; 95% 0–79%) | -1.32R |
 
 ### 2026-10-28
 
