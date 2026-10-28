@@ -15,10 +15,31 @@ Research only. Nothing here places or suggests orders.
 
 R is measured on the stock, from entry to stop, before option costs. Each rate shows its 95% range. Sessions before 29 Oct 2026 were backfilled after the fact (`backfilled: true`), so they are not proof of a pre-open record. 19-21 Oct use 5-minute bars because IBKR no longer had 2-minute bars for them.
 
+The headline tables use only cards that were really published (from 19 Oct). The rebuilt history (4 Mar – 16 Oct) sits in its own tables, split by bar size; how it was rebuilt and how far to trust it is in [docs/backfill.md](docs/backfill.md).
+
 <!-- scorecard:start -->
-Last scored session: **2026-10-28** · 8 sessions in the ledger.
+Last scored session: **2026-10-28** · 8 sessions of published cards · 158 sessions of rebuilt history.
 
-### All setups
+### Published cards
+
+| Measure | Result |
+| --- | --- |
+| Setups published | 64 |
+| Triggered | 56% (36/64; 95% 44–68%) |
+| Filled after the retest | 61% (22/36; 95% 45–75%) |
+| Hit T1 before the stop | 55% (12/22; 95% 35–73%) |
+| Stopped | 41% (9/22; 95% 23–61%) |
+| Reached T2 | 0% (0/22; 95% 0–15%) |
+| Average R, card exits | +0.61R |
+| Average R, 5-minute rule | +0.38R |
+| Average R, hold for T2 | +1.00R |
+| Total R (card / 5-min / T2) | +13.36R / +8.32R / +22.08R |
+| Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades |
+| Average best / worst move | +1.76R / -1.13R |
+| Median minutes to T1 | 18 |
+| Bias read right | 44% (14/32; 95% 28–61%) |
+
+### Last 20 published sessions
 
 | Measure | Result |
 | --- | --- |
@@ -37,24 +58,61 @@ Last scored session: **2026-10-28** · 8 sessions in the ledger.
 | Median minutes to T1 | 18 |
 | Bias read right | 44% (14/32; 95% 28–61%) |
 
-### Last 20 sessions
+### Rebuilt history, by bar size
 
-| Measure | Result |
-| --- | --- |
-| Setups published | 64 |
-| Triggered | 56% (36/64; 95% 44–68%) |
-| Filled after the retest | 61% (22/36; 95% 45–75%) |
-| Hit T1 before the stop | 55% (12/22; 95% 35–73%) |
-| Stopped | 41% (9/22; 95% 23–61%) |
-| Reached T2 | 0% (0/22; 95% 0–15%) |
-| Average R, card exits | +0.61R |
-| Average R, 5-minute rule | +0.38R |
-| Average R, hold for T2 | +1.00R |
-| Total R (card / 5-min / T2) | +13.36R / +8.32R / +22.08R |
-| Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades |
-| Average best / worst move | +1.76R / -1.13R |
-| Median minutes to T1 | 18 |
-| Bias read right | 44% (14/32; 95% 28–61%) |
+Cards re-picked from saved data with the card's own code (`tools/rebuild_cards.py`). Coarse bars miss many retest fills, so read fill and R numbers here as rough; the bias, trigger and day-range facts hold on any bar size. `reports/tier_check.json` measures the gap.
+
+| Measure | Published cards (19 Oct – 28 Oct) | Rebuilt, 5-min bars (13 Oct – 16 Oct) | Rebuilt, 30-min bars (14 Jul – 12 Oct) | Rebuilt, 60-min bars (4 Mar – 13 Jul) |
+| --- | --- | --- | --- | --- |
+| Setups published | 64 | 32 | 511 | 713 |
+| Triggered | 56% (36/64; 95% 44–68%) | 56% (18/32; 95% 39–72%) | 42% (217/511; 95% 38–47%) | 44% (313/713; 95% 40–48%) |
+| Filled after the retest | 61% (22/36; 95% 45–75%) | 50% (9/18; 95% 29–71%) | 40% (86/217; 95% 33–46%) | 31% (97/313; 95% 26–36%) |
+| Hit T1 before the stop | 55% (12/22; 95% 35–73%) | 44% (4/9; 95% 19–73%) | 57% (49/86; 95% 46–67%) | 65% (63/97; 95% 55–74%) |
+| Stopped | 41% (9/22; 95% 23–61%) | 56% (5/9; 95% 27–81%) | 17% (15/86; 95% 11–27%) | 12% (12/97; 95% 7–20%) |
+| Reached T2 | 0% (0/22; 95% 0–15%) | 22% (2/9; 95% 6–55%) | 5% (4/86; 95% 2–11%) | 2% (2/97; 95% 1–7%) |
+| Average R, card exits | +0.61R | +0.22R | +0.94R | +1.11R |
+| Average R, 5-minute rule | +0.38R | +0.22R | – | – |
+| Average R, hold for T2 | +1.00R | +0.39R | +0.49R | +0.75R |
+| Total R (card / 5-min / T2) | +13.36R / +8.32R / +22.08R | +1.95R / +1.95R / +3.54R | +80.42R / – / +41.86R | +107.25R / – / +72.75R |
+| Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades | – / – / – over 0 trades | – / – / – over 0 trades | – / – / – over 0 trades |
+| Average best / worst move | +1.76R / -1.13R | +1.95R / -0.97R | +2.30R / -0.84R | +2.42R / -0.97R |
+| Median minutes to T1 | 18 | 2 | – | – |
+| Bias read right | 44% (14/32; 95% 28–61%) | 19% (3/16; 95% 7–43%) | 44% (110/250; 95% 38–50%) | 38% (132/349; 95% 33–43%) |
+
+Card score vs R (information coefficient), rebuilt history: -0.122; rank vs R: -0.111.
+
+#### Rebuilt history by bias
+
+| Group | Setups | Bias read right | Triggered | Hit T1 before the stop | Average R, card |
+| --- | --- | --- | --- | --- | --- |
+| breakout | 522 | 44% (115/261; 95% 38–50%) | 45% (234/522; 95% 41–49%) | 63% (47/75; 95% 51–73%) | +0.93R |
+| range | 19 | – | 21% (4/19; 95% 8–43%) | 100% (2/2; 95% 34–100%) | +2.00R |
+| support | 715 | 37% (130/354; 95% 32–42%) | 43% (310/715; 95% 40–47%) | 58% (67/115; 95% 49–67%) | +1.01R |
+
+#### Rebuilt history by where the stock opened
+
+| Group | Setups | Bias read right | Triggered | Hit T1 before the stop | Average R, card |
+| --- | --- | --- | --- | --- | --- |
+| Opened between floor and ceiling | 717 | 37% (130/350; 95% 32–42%) | 38% (274/717; 95% 35–42%) | 56% (66/118; 95% 47–65%) | +0.86R |
+| Opened over the ceiling | 310 | 74% (111/151; 95% 66–80%) | 49% (153/310; 95% 44–55%) | 63% (26/41; 95% 48–76%) | +1.01R |
+| Opened under the floor | 229 | 4% (4/114; 95% 1–9%) | 53% (121/229; 95% 46–59%) | 73% (24/33; 95% 56–85%) | +1.40R |
+
+#### Rebuilt history by card rank
+
+| Group | Setups | Bias read right | Triggered | Hit T1 before the stop | Average R, card |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 316 | 38% (60/158; 95% 31–46%) | 43% (137/316; 95% 38–49%) | 48% (20/42; 95% 33–62%) | +0.83R |
+| 2 | 316 | 42% (66/156; 95% 35–50%) | 45% (142/316; 95% 40–50%) | 54% (32/59; 95% 42–66%) | +0.81R |
+| 3 | 315 | 37% (57/154; 95% 30–45%) | 41% (128/315; 95% 35–46%) | 81% (35/43; 95% 67–90%) | +1.51R |
+| 4 | 309 | 42% (62/147; 95% 34–50%) | 46% (141/309; 95% 40–51%) | 60% (29/48; 95% 46–73%) | +0.88R |
+
+#### Rebuilt history by how far the level was from the close
+
+| Group | Setups | Bias read right | Triggered | Hit T1 before the stop | Average R, card |
+| --- | --- | --- | --- | --- | --- |
+| 0.5-1 ATR | 226 | 38% (82/216; 95% 32–45%) | 21% (47/226; 95% 16–27%) | 68% (13/19; 95% 46–85%) | +1.07R |
+| <0.5 ATR | 983 | 40% (242/611; 95% 36–44%) | 51% (498/983; 95% 48–54%) | 59% (102/172; 95% 52–66%) | +0.97R |
+| >1 ATR | 47 | 55% (21/38; 95% 40–70%) | 6% (3/47; 95% 2–17%) | 100% (1/1; 95% 21–100%) | +2.00R |
 
 ### 2026-10-28
 
@@ -71,7 +129,7 @@ Last scored session: **2026-10-28** · 8 sessions in the ledger.
 
 <!-- scorecard:end -->
 
-## How a setup is scored (scorer 1.0)
+## How a setup is scored (scorer 1.1)
 
 - **Trigger:** a 2-minute close beyond the card's level.
 - **Fill:** a later bar touches the entry and closes back on the trade side of the level. This is the card's "then a dip holds it" or "then a bounce fails under it". It must happen outside the no-entry windows, stored in New York time so clock changes don't move them: 09:30-09:35 and 11:30-13:00 ET. That is before 00:35 and 02:30-04:00 Sydney while both cities are on daylight time. A close through the stop before any valid retest kills the setup.
@@ -98,6 +156,8 @@ bars/YYYY/DATE/SYMBOL.json      the bars each outcome was scored on
 scorecard.json, data/setups.csv derived; rebuilt by `python -m ledger scorecard`
 reports/daily, reports/weekly   readable pages
 schema/                         required fields per record type
+tools/                          rebuild_cards.py (past cards), tier_check.py (coarse-bar error bar)
+docs/backfill.md                how the rebuilt history was made and how far to trust it
 ```
 
 ## Commands

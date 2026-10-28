@@ -20,7 +20,7 @@ from datetime import timedelta
 from .common import NY, canonical_hash, parse_t
 
 SCHEMA = "outcome/1"
-SCORER_VERSION = "1.0"
+SCORER_VERSION = "1.1"  # 1.1: a "range" card makes no bias call, so bias_correct is None
 
 
 def _blocked(t, windows) -> bool:
@@ -121,7 +121,10 @@ def score(p: dict, B: dict, *, bars_sha256: str, recorded_at: str) -> dict:
 
 
 def _bias_correct(p, day) -> bool:
-    """support: the floor held all day (low stayed above it); breakout: the session closed above the ceiling."""
+    """support: the floor held all day (low stayed above it); breakout: the session closed above the ceiling.
+    range: no call to grade."""
+    if p["bias"] == "range" or p["floor"] is None or p["ceiling"] is None:
+        return None
     if p["bias"] == "support":
         return day["low"] >= p["floor"]
     return day["close"] > p["ceiling"]

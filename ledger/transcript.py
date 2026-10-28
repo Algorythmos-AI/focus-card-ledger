@@ -2,6 +2,7 @@
 
 python -m ledger.transcript --since 2026-10-29T20:00:00Z --out /tmp/ibkr
 writes one <contract_id>.json per contract (the newest result wins) and prints them.
+--step FIVE_MINS keeps only results of that bar size, so a 5-min and a 30-min pull of one name don't collide.
 A large result is saved by the harness to a file whose path is in the tool result text; that file is used.
 """
 from __future__ import annotations
@@ -22,7 +23,7 @@ def _text(content) -> str:
     return "".join(b.get("text", "") for b in content if isinstance(b, dict))
 
 
-def collect(since: str, root: Path = Path.home() / ".claude" / "projects") -> dict[int, dict]:
+def collect(since: str, root: Path = Path.home() / ".claude" / "projects", step: str | None = None) -> dict[int, dict]:
     t0 = parse_t(since)
     uses, out = {}, {}
     for f in sorted(root.glob("*/*.jsonl"), key=lambda p: p.stat().st_mtime):
@@ -49,6 +50,8 @@ def collect(since: str, root: Path = Path.home() / ".claude" / "projects") -> di
                         continue
                     if "time" in data:
                         inp = uses[b["tool_use_id"]]
+                        if step and inp.get("step") != step:
+                            continue
                         out[int(inp["contract_id"])] = data | {"_request": inp}
     return out
 
@@ -57,8 +60,9 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--since", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--step")
     a = ap.parse_args(argv)
-    res = collect(a.since)
+    res = collect(a.since, step=a.step)
     Path(a.out).mkdir(parents=True, exist_ok=True)
     for cid, data in res.items():
         (Path(a.out) / f"{cid}.json").write_text(json.dumps(data))

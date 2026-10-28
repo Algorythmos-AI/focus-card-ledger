@@ -3,6 +3,7 @@
 The card page derives entry, stop and T1 from each level; this module applies the same formula so
 the ledger stores the numbers Sam saw: entry = level +/- 0.01 ATR, stop = level -/+ 0.1 ATR,
 T1 = entry +/- 2R, T2 = the card's named target.
+A card carrying card_source "rebuilt" (tools/rebuild_cards.py) passes that tag and its `rebuild` note on.
 """
 from __future__ import annotations
 
@@ -50,6 +51,8 @@ def predictions_from_card(card: dict, *, recorded_at: str, backfilled: bool = Fa
     for it in sorted(card["items"], key=lambda x: x["rank"]):
         pre = pre_by.get(it["symbol"])
         for side in ("call", "put"):
+            if it["breakout_above" if side == "call" else "hold_above"] is None:
+                continue  # no level on that side (e.g. at a one-year high): the card shows no plan for it
             rec = {
                 "schema": SCHEMA,
                 "id": f'{card["session"]}-{it["symbol"]}-{side}',
@@ -75,6 +78,9 @@ def predictions_from_card(card: dict, *, recorded_at: str, backfilled: bool = Fa
                 "recorded_at": recorded_at,
                 "backfilled": backfilled,
             }
+            if card.get("card_source"):  # "rebuilt": re-picked later from saved data, not the card Sam saw
+                rec["card_source"] = card["card_source"]
+                rec["rebuild"] = card.get("rebuild")
             rec["sha256"] = canonical_hash(rec)
             out.append(rec)
     return out

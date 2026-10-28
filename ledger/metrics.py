@@ -9,11 +9,19 @@ import csv
 import io
 import statistics
 from collections import defaultdict
+from datetime import date
 
 from .common import ROOT, read_jsonl, wilson
 
 POLICIES = ("card", "five_min", "hold_t2")
-SLICES = ("symbol", "side", "bias", "rank", "confidence", "level_type", "gap", "backfilled", "bar_size")
+SLICES = ("symbol", "side", "bias", "rank", "confidence", "level_type", "gap", "open_gap", "weekday", "distance",
+          "backfilled", "bar_size", "card_source")
+# Quality tiers. Published cards are the headline; rebuilt history is kept apart and split by bar size, because
+# 30- and 60-minute bars miss many retest fills (reports/tier_check.json measures by how much).
+TIERS = {"published": lambda r: r["card_source"] == "published",
+         "rebuilt_5min": lambda r: r["card_source"] == "rebuilt" and r["bar_size"] == "5min",
+         "rebuilt_30min": lambda r: r["card_source"] == "rebuilt" and r["bar_size"] == "30min",
+         "rebuilt_60min": lambda r: r["card_source"] == "rebuilt" and r["bar_size"] == "60min"}
 
 
 def load() -> list[dict]:
@@ -37,17 +45,35 @@ def _gap(p):
     return {"above_resistance": "gap_over_ceiling", "below_support": "gap_under_floor"}.get(pre["where"], "inside")
 
 
+def _open_gap(p, day_open):
+    """Where the 09:30 open printed against the card's levels. Known before any entry (none before 09:35)."""
+    if p["ceiling"] is not None and day_open > p["ceiling"]:
+        return "opened_over_ceiling"
+    if p["floor"] is not None and day_open < p["floor"]:
+        return "opened_under_floor"
+    return "opened_inside"
+
+
 def flatten(p, o, opt=None) -> dict:
     r = {k: p[k] for k in ("id", "session", "symbol", "side", "rank", "bias", "confidence", "card_score",
                            "level", "entry", "stop", "t1", "t2", "backfilled")}
     r["level_type"] = p["level_source"].split("/")[0]
     r["gap"] = _gap(p)
     r["bar_size"] = f'{o["bars"]["bar_seconds"] // 60}min'
+    r["card_source"] = p.get("card_source", "published")
+    r["weekday"] = date.fromisoformat(p["session"]).strftime("%a")
+    r["open_gap"] = _open_gap(p, o["day"]["open"])
+    d = abs(p["level"] - p["prior_close"]) / p["atr"] if p["atr"] else None
+    r["distance_atr"] = round(d, 2) if d is not None else None
+    r["distance"] = "unknown" if d is None else "<0.5 ATR" if d < 0.5 else "0.5-1 ATR" if d < 1 else ">1 ATR"
     for k in ("triggered", "filled", "result", "fill_time", "t1_hit", "t2_hit", "mfe_r", "mae_r",
               "minutes_to_t1", "bias_correct", "trigger_time"):
         r[k] = o.get(k)
     for pol in POLICIES:
         r[f"r_{pol}"] = o["policies"][pol]["r"] if o.get("policies") else None
+    if o["bars"]["bar_seconds"] > 300:
+        r["r_five_min"] = None  # a 5-minute exit can't be read off 30- or 60-minute bars
+        r["minutes_to_t1"] = None
     if opt and opt.get("policies"):
         r["option_entry"] = opt["contract"]["entry_premium"]
         for pol in POLICIES:
@@ -71,7 +97,7 @@ def summarize(rows: list[dict]) -> dict:
         rs = [r[f"r_{pol}"] for r in fill if r[f"r_{pol}"] is not None]
         gw, gl = sum(x for x in rs if x > 0), -sum(x for x in rs if x < 0)
         s[f"{pol}_expectancy_r"] = round(statistics.mean(rs), 3) if rs else None
-        s[f"{pol}_total_r"] = round(sum(rs), 2)
+        s[f"{pol}_total_r"] = round(sum(rs), 2) if rs else None
         s[f"{pol}_profit_factor"] = round(gw / gl, 2) if gl else None
         us = [r.get(f"opt_usd_{pol}") for r in fill if r.get(f"opt_usd_{pol}") is not None]
         s[f"{pol}_option_usd_total"] = round(sum(us), 2) if us else None
@@ -123,25 +149,49 @@ def spearman(xs, ys):
     return round(cov / (va * vb) ** 0.5, 3) if va and vb else None
 
 
-def scorecard(rows: list[dict], rolling_sessions: int = 20) -> dict:
-    sessions = sorted({r["session"] for r in rows})
-    card = {"as_of_session": sessions[-1] if sessions else None, "sessions": len(sessions),
-            "all": summarize(rows), "live_only": summarize([r for r in rows if not r["backfilled"]])}
-    recent = set(sessions[-rolling_sessions:])
-    card[f"rolling_{rolling_sessions}"] = summarize([r for r in rows if r["session"] in recent])
-    card["by"] = {}
+def _by(rows):
+    out = {}
     for key in SLICES:
         groups = defaultdict(list)
         for r in rows:
             groups[str(r[key])].append(r)
-        card["by"][key] = {g: summarize(v) for g, v in sorted(groups.items())}
+        out[key] = {g: summarize(v) for g, v in sorted(groups.items())}
+    return out
+
+
+def _calibration(rows):
     filled = [r for r in rows if r["filled"]]
-    card["calibration"] = {
+    return {
         "ic_card_score_vs_r": spearman([r["card_score"] for r in filled], [r["r_card"] for r in filled]),
         "ic_rank_vs_r": spearman([-r["rank"] for r in filled], [r["r_card"] for r in filled]),
         "win_rate_by_confidence": {c: summarize([r for r in rows if r["confidence"] == c])["win_rate_t1_before_stop"]
                                    for c in ("high", "medium", "low")},
     }
+
+
+def scorecard(rows: list[dict], rolling_sessions: int = 20) -> dict:
+    """Headline numbers ("published", "rolling_20", "by", "calibration") use only cards that were really
+    published. Rebuilt history is under "tiers", "by_rebuilt" and "calibration_rebuilt"."""
+    pub = [r for r in rows if r["card_source"] == "published"]
+    reb = [r for r in rows if r["card_source"] != "published"]
+    sessions = sorted({r["session"] for r in rows})
+    pub_sessions = sorted({r["session"] for r in pub})
+    card = {"as_of_session": sessions[-1] if sessions else None, "sessions": len(sessions),
+            "published_sessions": len(pub_sessions),
+            "rebuilt_sessions": [min(r["session"] for r in reb), max(r["session"] for r in reb)] if reb else None,
+            "all": summarize(rows), "published": summarize(pub),
+            "live_only": summarize([r for r in rows if not r["backfilled"]])}
+    recent = set(pub_sessions[-rolling_sessions:])
+    card[f"rolling_{rolling_sessions}"] = summarize([r for r in pub if r["session"] in recent])
+    card["tiers"] = {}
+    for name, keep in TIERS.items():
+        tr = [r for r in rows if keep(r)]
+        if tr:
+            card["tiers"][name] = summarize(tr) | {"sessions": [min(r["session"] for r in tr), max(r["session"] for r in tr)]}
+    card["by"] = _by(pub)
+    card["by_rebuilt"] = _by(reb)
+    card["calibration"] = _calibration(pub)
+    card["calibration_rebuilt"] = _calibration(reb)
     return card
 
 

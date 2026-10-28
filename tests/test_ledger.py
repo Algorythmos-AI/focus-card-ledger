@@ -36,6 +36,15 @@ class CardTest(unittest.TestCase):
         self.assertEqual([r["confidence"] for r in recs], ["high", "low"])
 
 
+    def test_rebuilt_tag_and_missing_level(self):
+        it = dict(ITEM, breakout_above=None, resistance=None, target_up=None)
+        recs = card.predictions_from_card(dict(CARD, items=[it], card_source="rebuilt", rebuild={"levels": "x"}),
+                                          recorded_at="t", backfilled=True)
+        self.assertEqual([r["side"] for r in recs], ["put"])
+        self.assertEqual((recs[0]["card_source"], recs[0]["rebuild"]), ("rebuilt", {"levels": "x"}))
+        self.assertNotIn("card_source", card.predictions_from_card(CARD, recorded_at="t")[0])
+
+
 class ScoreTest(unittest.TestCase):
     def setUp(self):
         self.call = card.predictions_from_card(CARD, recorded_at="x")[0]
@@ -73,6 +82,10 @@ class ScoreTest(unittest.TestCase):
                            (770.3, 772.2, 770.3, 772.1)])
         self.assertEqual(o["policies"]["five_min"]["result"], "time_exit")
         self.assertEqual(o["policies"]["card"]["result"], "target1")
+
+    def test_range_card_has_no_bias_verdict(self):
+        p = dict(self.call, bias="range")
+        self.assertIsNone(score.score(p, bars([(770, 770.3, 769.9, 770.2)] * 5), bars_sha256="h", recorded_at="y")["bias_correct"])
 
     def test_no_trigger(self):
         o = self.run_bars([(770, 770.3, 769.9, 770.2)] * 5)
