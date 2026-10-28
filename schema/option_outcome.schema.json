@@ -1,0 +1,19 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "option_outcome",
+ "description": "Approach C: the option the card's size rule would pick, priced on IBKR last-trade bars.",
+ "type": "object",
+ "required": [
+  "schema",
+  "id",
+  "session",
+  "symbol",
+  "side",
+  "outcome_sha256",
+  "recorded_at",
+  "contract",
+  "policies",
+  "note",
+  "sha256"
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "outcome",
+ "description": "What the market did with one prediction, scored from regular-hours bars after the close.",
+ "type": "object",
+ "required": [
+  "schema",
+  "id",
+  "session",
+  "symbol",
+  "side",
+  "prediction_sha256",
+  "scorer_version",
+  "recorded_at",
+  "bars",
+  "day",
+  "triggered",
+  "trigger_time",
+  "filled",
+  "fill_time",
+  "result",
+  "bias_correct",
+  "policies",
+  "r",
+  "sha256"
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "2026-10-28-SPY-call": {
+  "expiry": "20261028",
+  "chain": {
+   "771": {
+    "name": "SPY_771C",
+    "description": "SPY OCT 28 '26 771 Call"
+   },
+   "772": {
+    "name": "SPY_772C",
+    "description": "SPY OCT 28 '26 772 Call"
+   }
+  }
+ },
+ "2026-10-28-AVGO-call": {
+  "expiry": "20261028",
+  "chain": {
+   "347.5": {
+    "name": "AVGO_347.5C",
+    "description": "AVGO OCT 28 '26 347.5 Call"
+   }
+  }
+ },
+ "2026-10-28-AMD-call": {
+  "expiry": "20261028",
+  "chain": {
+   "565": {
+    "name": "AMD_565C",
+    "description": "AMD OCT 28 '26 565 Call"
+   },
+   "567.5": {
+    "name": "AMD_567.5C",
+    "description": "AMD OCT 28 '26 567.5 Call"
+   },
+   "570": {
+    "name": "AMD_570C",
+    "description": "AMD OCT 28 '26 570 Call"
+   },
+   "572.5": {
+    "name": "AMD_572.5C",
+    "description": "AMD OCT 28 '26 572.5 Call"
+   },
+   "575": {
+    "name": "AMD_575C",
+    "description": "AMD OCT 28 '26 575 Call"
+   }
+  }
+ },
+ "2026-10-28-NVDA-call": {
+  "expiry": "20261028",
+  "chain": {
+   "220": {
+    "name": "NVDA_220C",
+    "description": "NVDA OCT 28 '26 220 Call"
+   }
+  }
+ },
+ "2026-10-28-NVDA-put": {
+  "expiry": "20261028",
+  "chain": {
+   "215": {
+    "name": "NVDA_215P",
+    "description": "NVDA OCT 28 '26 215 Put"
+   }
+  }
+ }
+}
