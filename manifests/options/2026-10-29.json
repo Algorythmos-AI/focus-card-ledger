@@ -1,0 +1,16 @@
+{
+ "2026-10-29-META-call": {
+  "expiry": "20261030",
+  "chain": {
+   "625": {"name": "META_625C", "description": "META OCT 30 '26 625 Call"},
+   "635": {"name": "META_635C", "description": "META OCT 30 '26 635 Call"},
+   "640": {"name": "META_640C", "description": "META OCT 30 '26 640 Call"}
+  }
+ },
+ "2026-10-29-NVDA-put": {
+  "expiry": "20261030",
+  "chain": {
+   "212.5": {"name": "NVDA_212.5P", "description": "NVDA OCT 30 '26 212.5 Put"}
+  }
+ }
+}

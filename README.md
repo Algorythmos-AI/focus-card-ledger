@@ -34,7 +34,7 @@ Last scored session: **2026-10-29** · 9 sessions of published cards · 158 sess
 | Average R, 5-minute rule | +0.57R |
 | Average R, hold for T2 | +1.01R |
 | Total R (card / 5-min / T2) | +18.24R / +13.20R / +23.32R |
-| Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades |
+| Option P&L, 1 contract (card / 5-min / T2) | -$57 / -$103 / -$172 over 6 trades |
 | Average best / worst move | +1.67R / -1.01R |
 | Median minutes to T1 | 31 |
 | Bias read right | 42% (15/36; 95% 27–58%) |
@@ -53,7 +53,7 @@ Last scored session: **2026-10-29** · 9 sessions of published cards · 158 sess
 | Average R, 5-minute rule | +0.57R |
 | Average R, hold for T2 | +1.01R |
 | Total R (card / 5-min / T2) | +18.24R / +13.20R / +23.32R |
-| Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades |
+| Option P&L, 1 contract (card / 5-min / T2) | -$57 / -$103 / -$172 over 6 trades |
 | Average best / worst move | +1.67R / -1.01R |
 | Median minutes to T1 | 31 |
 | Bias read right | 42% (15/36; 95% 27–58%) |
@@ -74,7 +74,7 @@ Cards re-picked from saved data with the card's own code (`tools/rebuild_cards.p
 | Average R, 5-minute rule | +0.57R | +0.22R | – |
 | Average R, hold for T2 | +1.01R | +0.18R | +0.54R |
 | Total R (card / 5-min / T2) | +18.24R / +13.20R / +23.32R | +66.60R / +58.74R / +47.80R | +44.67R / – / +20.08R |
-| Option P&L, 1 contract (card / 5-min / T2) | -$87 / -$133 / -$164 over 5 trades | – / – / – over 0 trades | – / – / – over 0 trades |
+| Option P&L, 1 contract (card / 5-min / T2) | -$57 / -$103 / -$172 over 6 trades | – / – / – over 0 trades | – / – / – over 0 trades |
 | Average best / worst move | +1.67R / -1.01R | +1.51R / -0.96R | +2.31R / -0.91R |
 | Median minutes to T1 | 31 | 18 | – |
 | Bias read right | 42% (15/36; 95% 27–58%) | 40% (181/454; 95% 36–44%) | 40% (65/161; 95% 33–48%) |
@@ -121,7 +121,7 @@ Card score vs R (information coefficient), rebuilt history: 0.051; rank vs R: 0.
 | META call (#1, support) | 624.42 → 624.68 / 621.87 / 630.3 / 647.69 | target1 | +2.00R | -0.09R | – |
 | META put (#1, support) | 609.0 → 608.74 / 611.55 / 603.12 / 578.68 | no trigger | – | – | – |
 | NVDA call (#2, support) | 219.99 → 220.05 / 219.39 / 221.37 / 223.78 | no trigger | – | – | – |
-| NVDA put (#2, support) | 214.47 → 214.41 / 215.07 / 213.09 / 210.18 | target1 | +2.00R | +2.00R | – |
+| NVDA put (#2, support) | 214.47 → 214.41 / 215.07 / 213.09 / 210.18 | target1 | +2.00R | +2.00R | +$30 |
 | TSLA call (#3, breakout) | 410.85 → 410.99 / 409.44 / 414.09 / 498.83 | no trigger | – | – | – |
 | TSLA put (#3, breakout) | 397.18 → 397.04 / 398.59 / 393.94 / 386.83 | no trigger | – | – | – |
 | SPY call (#4, breakout) | 773.36 → 773.43 / 772.65 / 774.99 / 781.62 | no trigger | – | – | – |
