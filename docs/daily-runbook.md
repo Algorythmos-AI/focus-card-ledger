@@ -36,3 +36,7 @@ Setup each time: if `/home/user/focus-card-ledger` is missing, clone `Algorythmo
 6. `python -m ledger scorecard`; on Fridays also `python -m ledger report --week <ISO week, e.g. 2026-W44>`.
 7. `python -m unittest discover tests` and `python -m ledger validate`, then commit everything as
    "outcomes <session>" and push to main.
+8. Dashboard: `python -m ledger dashboard --session <session> --send`. It sends the day to Card record on
+   lab.algorythmos.com (and the review on Options) with the radar's key. Exit 2 "does not take ledger editions yet"
+   means the Card record release has not reached production: carry on, nothing is lost, and the next day's edition
+   carries the whole record. Any other non-zero exit: say so in the reply.

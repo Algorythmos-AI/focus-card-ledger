@@ -6,6 +6,7 @@
   options   --session D --manifest FILE                           C: choose a contract per filled setup, score it
   scorecard                                                       rebuild scorecard.json, data/setups.csv, README
   report    --week YYYY-Www                                       B: weekly report
+  dashboard --session D [--out FILE] [--send]                     the day's edition for Sam's dashboard
   validate  [BASE_REF]                                            CI checks
 """
 from __future__ import annotations
@@ -18,7 +19,7 @@ from pathlib import Path
 
 from . import bars as barsmod
 from . import card as cardmod
-from . import metrics, options, report, score, validate
+from . import dashboard, metrics, options, report, score, validate
 from .common import ROOT, canonical_hash, day_path, read_jsonl, write_jsonl
 
 
@@ -134,6 +135,20 @@ def cmd_report(a):
     return 0
 
 
+def cmd_dashboard(a):
+    doc = dashboard.build(a.session)
+    body = json.dumps(doc, separators=(",", ":"))
+    if a.out:
+        Path(a.out).write_text(body + "\n")
+    d = doc["day"]
+    print(f"{a.session}: {len(doc['names'])} names, {d['filled']} fills, {d['r']:+.2f}R, {len(body):,} bytes, run {doc['run_id']}")
+    if not a.send:
+        return 0
+    status, text = dashboard.send(doc)
+    print(f"dashboard: {status} {text}")
+    return 0 if status == 200 else 2 if status == 2 else 1
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="ledger")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -144,11 +159,12 @@ def main(argv=None):
     sub.add_parser("scorecard")
     p = sub.add_parser("report"); p.add_argument("--week", required=True)
     p = sub.add_parser("validate"); p.add_argument("base", nargs="?")
+    p = sub.add_parser("dashboard"); p.add_argument("--session", required=True); p.add_argument("--out"); p.add_argument("--send", action="store_true")
     a = ap.parse_args(argv)
     if a.cmd == "validate":
         return validate.main([a.base] if a.base else [])
     return {"predict": cmd_predict, "bars": cmd_bars, "score": cmd_score, "options": cmd_options,
-            "scorecard": cmd_scorecard, "report": cmd_report}[a.cmd](a)
+            "scorecard": cmd_scorecard, "report": cmd_report, "dashboard": cmd_dashboard}[a.cmd](a)
 
 
 if __name__ == "__main__":

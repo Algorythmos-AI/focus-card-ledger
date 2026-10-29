@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timedelta, timezone
 
-from ledger import card, options, score
+from ledger import card, dashboard, options, score
 from ledger.common import canonical_hash, wilson
 from ledger.metrics import spearman
 
@@ -121,3 +121,37 @@ class StatsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class DashboardTest(unittest.TestCase):
+    """The edition for the dashboard, built from the ledger's own files for 28 Oct 2026."""
+
+    def test_day_matches_the_daily_report(self):
+        doc = dashboard.build("2026-10-28", as_of="2026-10-28T21:00:00Z")
+        self.assertEqual([n["symbol"] for n in doc["names"]], ["AVGO", "AMD", "NVDA", "SPY"])
+        d = doc["day"]
+        self.assertEqual((d["sides"], d["filled"], d["t1"], d["stopped"], d["r"], d["option_usd"]), (8, 5, 3, 1, 5.06, -87.0))
+        self.assertEqual(doc["card_source"], "published")
+        avgo = doc["names"][0]
+        self.assertEqual(avgo["bars"]["t"][0], 0)  # 09:30 New York
+        self.assertLessEqual(max(avgo["bars"]["t"]), 390)
+        call = avgo["sides"][0]
+        self.assertEqual((call["result"], call["r"], call["option"]["reason"], call["option"]["expiry"]), ("target1", 2.0, "option_stop_25pct", "2026-10-28"))
+
+    def test_run_id_follows_the_content_not_the_clock(self):
+        a = dashboard.build("2026-10-28", as_of="2026-10-28T21:00:00Z")
+        b = dashboard.build("2026-10-28", as_of="2026-10-29T09:00:00Z")
+        self.assertEqual(a["run_id"], b["run_id"])
+
+    def test_record_holds_only_days_up_to_the_session(self):
+        doc = dashboard.build("2026-10-21", as_of="2026-10-21T21:00:00Z")
+        self.assertEqual([d["session"] for d in doc["record"]["days"]], ["2026-10-19", "2026-10-20", "2026-10-21"])
+        self.assertIn("rebuilt_2min", doc["record"]["tiers"])
+
+    def test_send_needs_both_secrets(self):
+        import os
+        from unittest import mock
+        with mock.patch.dict(os.environ, {"RADAR_INGEST_SECRET": "", "VERCEL_AUTOMATION_BYPASS_SECRET": ""}):
+            status, text = dashboard.send({"schema_version": 1})
+        self.assertEqual(status, 2)
+        self.assertIn("RADAR_INGEST_SECRET", text)
