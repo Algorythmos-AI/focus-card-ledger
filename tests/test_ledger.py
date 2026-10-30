@@ -100,6 +100,16 @@ class OptionTest(unittest.TestCase):
         strike, _, prem = options.choose("call", 770.48, "2026-10-28T13:32:00Z", chain)
         self.assertEqual((strike, prem), (772.0, 1.7))
 
+    def test_cap_is_15_dollars_from_2026_10_30(self):
+        self.assertEqual(options.max_premium("2026-10-29"), 2.00)
+        self.assertEqual(options.max_premium("2026-10-30"), 15.00)
+        b = lambda px: bars([(px, px, px, px)] * 3)
+        chain = [(626.0, b(9.8)), (630.0, b(6.1)), (635.0, b(1.9))]
+        strike, _, prem = options.choose("call", 624.68, "2026-10-28T13:32:00Z", chain, cap=options.max_premium("2026-10-30"))
+        self.assertEqual((strike, prem), (626.0, 9.8))
+        strike, _, prem = options.choose("call", 624.68, "2026-10-28T13:32:00Z", chain, cap=options.max_premium("2026-10-29"))
+        self.assertEqual((strike, prem), (635.0, 1.9))
+
     def test_option_stop(self):
         o = {"id": "x", "session": "s", "symbol": "SPY", "side": "call", "sha256": "h", "filled": True,
              "fill_time": "2026-10-28T13:30:00Z",

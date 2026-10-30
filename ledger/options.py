@@ -1,8 +1,9 @@
 """Approach C: what each filled setup would have done in the option Sam would buy.
 
 Contract rule (from the card's size line): the nearest out-of-the-money strike, moving further out until
-the premium at the fill bar is $2.00 or less, so the -25% option stop risks at most $50. Expiry: the
-nearest one on or after the session (0DTE when it exists).
+the premium at the fill bar is at or under the cap: $2.00 up to the 2026-10-29 session, $15.00 from the 2026-10-30
+session (the options clone's cap, trading-lab-research DEC-0039). Expiry: the nearest one on or after the session
+(0DTE when it exists).
 
 Prices are the option's 2-minute LAST-trade bars from IBKR (delayed 15 min, pulled after the close).
 Entry = the option bar close at the stock fill bar. Exit = the earlier of the -25% option stop
@@ -14,8 +15,15 @@ from __future__ import annotations
 from .common import canonical_hash, parse_t
 
 SCHEMA = "option_outcome/1"
-MAX_PREMIUM = 2.00
+MAX_PREMIUM = 2.00          # sessions up to 2026-10-29
+MAX_PREMIUM_CAP15 = 15.00   # sessions from CAP15_FROM
+CAP15_FROM = "2026-10-30"
 OPTION_STOP = 0.25
+
+
+def max_premium(session: str) -> float:
+    """The premium cap that applied to `session` (YYYY-MM-DD)."""
+    return MAX_PREMIUM_CAP15 if session >= CAP15_FROM else MAX_PREMIUM
 
 
 def _idx(B: dict, t: str) -> int | None:
@@ -23,13 +31,14 @@ def _idx(B: dict, t: str) -> int | None:
     return next((i for i, x in enumerate(B["time"]) if parse_t(x) == want), None)
 
 
-def choose(side: str, stock_entry: float, fill_time: str, chain: list[tuple[float, dict]]) -> tuple[float, dict, float] | None:
+def choose(side: str, stock_entry: float, fill_time: str, chain: list[tuple[float, dict]],
+           cap: float = MAX_PREMIUM) -> tuple[float, dict, float] | None:
     """chain: [(strike, option_bars)], any order. Returns (strike, bars, premium) or None."""
     otm = sorted((s for s in chain if (s[0] > stock_entry if side == "call" else s[0] < stock_entry)),
                  key=lambda s: abs(s[0] - stock_entry))
     for strike, bars in otm:
         i = _idx(bars, fill_time)
-        if i is not None and bars["close"][i] <= MAX_PREMIUM:
+        if i is not None and bars["close"][i] <= cap:
             return strike, bars, bars["close"][i]
     return None
 
@@ -40,7 +49,7 @@ def score_option(o: dict, *, strike: float | None, expiry: str | None, descripti
            "outcome_sha256": o["sha256"], "recorded_at": recorded_at, "contract": None, "policies": None,
            "note": note}
     if bars is None or not o.get("filled"):
-        rec["note"] = note or ("not filled" if not o.get("filled") else "no option under $2.00")
+        rec["note"] = note or ("not filled" if not o.get("filled") else f"no option under ${max_premium(o['session']):.2f}")
         rec["sha256"] = canonical_hash(rec)
         return rec
     fi = _idx(bars, o["fill_time"])

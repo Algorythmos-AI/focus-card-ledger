@@ -97,11 +97,11 @@ def cmd_options(a):
             if B is not None:
                 chain.append((float(strike), B | {"_sha": h, "_desc": c.get("description")}))
         pick = options.choose(o["side"], next(p for p in read_jsonl(day_path("predictions", a.session)) if p["id"] == oid)["entry"],
-                              o["fill_time"], chain)
+                              o["fill_time"], chain, cap=options.max_premium(a.session))
         if pick is None:
             recs.append(options.score_option(o, strike=None, expiry=m["expiry"], description=None, bars=None,
                                              bars_sha256=None, recorded_at=now(),
-                                             note="no strike at or under $2.00 among those pulled"))
+                                             note=f"no strike at or under ${options.max_premium(a.session):.2f} among those pulled"))
             continue
         strike, B, _ = pick
         recs.append(options.score_option(o, strike=strike, expiry=m["expiry"], description=B["_desc"],

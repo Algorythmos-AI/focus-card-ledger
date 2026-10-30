@@ -28,7 +28,7 @@ Setup each time: if `/home/user/focus-card-ledger` is missing, clone `Algorythmo
      trade direction (calls above, puts below).
    - Walk out from the first out-of-the-money strike: `get_price_history(<numeric id>, security_type="OPT",
      exchange="SMART", step="TWO_MINS", period="ONE_DAY", outside_rth=false)` until the close at the fill bar is
-     <= 2.00 (max 6 strikes).
+     <= the cap (max 6 strikes): 15.00 from the 2026-10-30 session, 2.00 before it (`ledger.options.max_premium`).
    - Re-run step 3's extractor, then `python -m ledger bars --name <SYM>_<strike><C|P> --ibkr ... --kind OPT --session <session>`
      for each pulled contract, and write `manifests/options/<session>.json`
      (`{"<id>": {"expiry": "YYYYMMDD", "chain": {"<strike>": {"name": "...", "description": "..."}}}}`).

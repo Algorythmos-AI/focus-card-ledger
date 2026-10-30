@@ -6,7 +6,7 @@ Every trading day:
 
 1. **Before the open**, each card setup (4 names × call and put) is written to `predictions/` and committed. That commit is the proof the card was not changed after the fact. Predictions are never edited.
 2. **After the close**, the setups are scored against IBKR 2-minute regular-hours bars. Results go to `outcomes/`, and the bars go to `bars/` with their hash.
-3. **Option check (C).** For every filled setup, the option the card's size rule would pick is priced on its own 2-minute bars and written to `options/`. That option is the nearest out-of-the-money strike at $2.00 or less.
+3. **Option check (C).** For every filled setup, the option the card's size rule would pick is priced on its own 2-minute bars and written to `options/`. That option is the nearest out-of-the-money strike at or under the premium cap: $2.00 up to the 2026-10-29 session, $15.00 from 2026-10-30.
 4. **Rebuild.** `scorecard.json`, `data/setups.csv`, the daily pages in `reports/daily/` and the table below are rebuilt from those files. A weekly report goes to `reports/weekly/`.
 
 Research only. Nothing here places or suggests orders.
