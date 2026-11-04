@@ -1,0 +1,4 @@
+{
+ "2026-11-04-PLTR-call": {"expiry": "20261106", "chain": {"177.5": {"name": "PLTR_177.5C", "description": "PLTR NOV 06 '26 177.5 Call"}}},
+ "2026-11-04-AMD-call": {"expiry": "20261104", "chain": {"495": {"name": "AMD_495C", "description": "AMD NOV 04 '26 495 Call"}}}
+}
