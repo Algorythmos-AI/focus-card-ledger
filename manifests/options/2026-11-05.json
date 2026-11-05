@@ -1,0 +1,4 @@
+{
+ "2026-11-05-AMZN-put": {"expiry": "20261106", "chain": {"262.5": {"name": "AMZN_262.5P", "description": "AMZN NOV 06 '26 262.5 Put"}}},
+ "2026-11-05-SPY-put": {"expiry": "20261105", "chain": {"762": {"name": "SPY_762P", "description": "SPY NOV 05 '26 762 Put"}}}
+}
