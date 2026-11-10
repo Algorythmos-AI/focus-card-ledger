@@ -1,59 +1,59 @@
 {
  "all": {
   "avg_mae_r": -0.95,
-  "avg_mfe_r": 1.61,
+  "avg_mfe_r": 1.62,
   "bias_hit_rate": {
    "ci95": [
-    0.366,
+    0.367,
     0.44
    ],
-   "k": 273,
-   "n": 678,
+   "k": 275,
+   "n": 682,
    "rate": 0.403
   },
-  "card_expectancy_r": 0.395,
-  "card_option_trades": 17,
-  "card_option_usd_total": -252.0,
-  "card_profit_factor": 1.68,
-  "card_total_r": 133.63,
+  "card_expectancy_r": 0.409,
+  "card_option_trades": 20,
+  "card_option_usd_total": 577.0,
+  "card_profit_factor": 1.71,
+  "card_total_r": 139.63,
   "fill_rate_of_triggered": {
    "ci95": [
-    0.458,
-    0.532
+    0.459,
+    0.534
    ],
-   "k": 338,
-   "n": 683,
-   "rate": 0.495
+   "k": 341,
+   "n": 687,
+   "rate": 0.496
   },
-  "filled": 338,
-  "five_min_expectancy_r": 0.269,
-  "five_min_option_trades": 17,
-  "five_min_option_usd_total": -236.0,
-  "five_min_profit_factor": 1.6,
-  "five_min_total_r": 81.07,
-  "hold_t2_expectancy_r": 0.311,
-  "hold_t2_option_trades": 17,
-  "hold_t2_option_usd_total": 573.0,
-  "hold_t2_profit_factor": 1.4,
-  "hold_t2_total_r": 105.11,
-  "median_minutes_to_t1": 18,
-  "setups": 1384,
+  "filled": 341,
+  "five_min_expectancy_r": 0.286,
+  "five_min_option_trades": 20,
+  "five_min_option_usd_total": 593.0,
+  "five_min_profit_factor": 1.65,
+  "five_min_total_r": 87.07,
+  "hold_t2_expectancy_r": 0.323,
+  "hold_t2_option_trades": 20,
+  "hold_t2_option_usd_total": 764.0,
+  "hold_t2_profit_factor": 1.41,
+  "hold_t2_total_r": 110.06,
+  "median_minutes_to_t1": 18.0,
+  "setups": 1392,
   "stop_rate": {
    "ci95": [
-    0.4,
-    0.506
+    0.397,
+    0.502
    ],
    "k": 153,
-   "n": 338,
-   "rate": 0.453
+   "n": 341,
+   "rate": 0.449
   },
   "t2_hit_rate": {
    "ci95": [
-    0.032,
-    0.079
+    0.031,
+    0.078
    ],
    "k": 17,
-   "n": 338,
+   "n": 341,
    "rate": 0.05
   },
   "trigger_rate": {
@@ -61,99 +61,99 @@
     0.467,
     0.52
    ],
-   "k": 683,
-   "n": 1384,
-   "rate": 0.493
+   "k": 687,
+   "n": 1392,
+   "rate": 0.494
   },
-  "triggered": 683,
+  "triggered": 687,
   "win_rate_t1_before_stop": {
    "ci95": [
-    0.418,
-    0.524
+    0.423,
+    0.528
    ],
-   "k": 159,
-   "n": 338,
-   "rate": 0.47
+   "k": 162,
+   "n": 341,
+   "rate": 0.475
   }
  },
- "as_of_session": "2026-11-09",
+ "as_of_session": "2026-11-10",
  "by": {
   "backfilled": {
    "False": {
-    "avg_mae_r": -0.68,
-    "avg_mfe_r": 1.84,
+    "avg_mae_r": -0.58,
+    "avg_mfe_r": 1.97,
     "bias_hit_rate": {
      "ci95": [
-      0.215,
-      0.558
+      0.237,
+      0.562
      ],
-     "k": 10,
-     "n": 27,
-     "rate": 0.37
+     "k": 12,
+     "n": 31,
+     "rate": 0.387
     },
-    "card_expectancy_r": 0.989,
-    "card_option_trades": 9,
-    "card_option_usd_total": -132.0,
-    "card_profit_factor": 3.41,
-    "card_total_r": 9.89,
+    "card_expectancy_r": 1.222,
+    "card_option_trades": 12,
+    "card_option_usd_total": 697.0,
+    "card_profit_factor": 4.87,
+    "card_total_r": 15.89,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.245,
-      0.612
+      0.295,
+      0.642
      ],
-     "k": 10,
-     "n": 24,
-     "rate": 0.417
+     "k": 13,
+     "n": 28,
+     "rate": 0.464
     },
-    "filled": 10,
-    "five_min_expectancy_r": 1.066,
-    "five_min_option_trades": 9,
-    "five_min_option_usd_total": -70.0,
-    "five_min_profit_factor": 8.96,
-    "five_min_total_r": 10.66,
-    "hold_t2_expectancy_r": 1.986,
-    "hold_t2_option_trades": 9,
-    "hold_t2_option_usd_total": 863.0,
-    "hold_t2_profit_factor": 4.07,
-    "hold_t2_total_r": 19.86,
-    "median_minutes_to_t1": 6,
-    "setups": 56,
+    "filled": 13,
+    "five_min_expectancy_r": 1.282,
+    "five_min_option_trades": 12,
+    "five_min_option_usd_total": 759.0,
+    "five_min_profit_factor": 13.43,
+    "five_min_total_r": 16.66,
+    "hold_t2_expectancy_r": 1.908,
+    "hold_t2_option_trades": 12,
+    "hold_t2_option_usd_total": 1054.0,
+    "hold_t2_profit_factor": 4.18,
+    "hold_t2_total_r": 24.81,
+    "median_minutes_to_t1": 7.0,
+    "setups": 64,
     "stop_rate": {
      "ci95": [
-      0.108,
-      0.603
+      0.082,
+      0.503
      ],
      "k": 3,
-     "n": 10,
-     "rate": 0.3
+     "n": 13,
+     "rate": 0.231
     },
     "t2_hit_rate": {
      "ci95": [
-      0.108,
-      0.603
+      0.082,
+      0.503
      ],
      "k": 3,
-     "n": 10,
-     "rate": 0.3
+     "n": 13,
+     "rate": 0.231
     },
     "trigger_rate": {
      "ci95": [
-      0.308,
+      0.323,
       0.559
      ],
-     "k": 24,
-     "n": 56,
-     "rate": 0.429
+     "k": 28,
+     "n": 64,
+     "rate": 0.438
     },
-    "triggered": 24,
+    "triggered": 28,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.397,
-      0.892
+      0.497,
+      0.918
      ],
-     "k": 7,
-     "n": 10,
-     "rate": 0.7
+     "k": 10,
+     "n": 13,
+     "rate": 0.769
     }
    },
    "True": {
@@ -236,159 +236,159 @@
   },
   "bar_size": {
    "2min": {
-    "avg_mae_r": -0.97,
-    "avg_mfe_r": 1.68,
+    "avg_mae_r": -0.91,
+    "avg_mfe_r": 1.74,
     "bias_hit_rate": {
      "ci95": [
-      0.314,
-      0.551
+      0.321,
+      0.552
      ],
-     "k": 27,
-     "n": 63,
-     "rate": 0.429
+     "k": 29,
+     "n": 67,
+     "rate": 0.433
     },
-    "card_expectancy_r": 0.658,
-    "card_option_trades": 17,
-    "card_option_usd_total": -252.0,
-    "card_profit_factor": 2.26,
-    "card_total_r": 22.36,
+    "card_expectancy_r": 0.766,
+    "card_option_trades": 20,
+    "card_option_usd_total": 577.0,
+    "card_profit_factor": 2.59,
+    "card_total_r": 28.36,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.411,
-      0.648
+      0.427,
+      0.657
      ],
-     "k": 34,
-     "n": 64,
-     "rate": 0.531
+     "k": 37,
+     "n": 68,
+     "rate": 0.544
     },
-    "filled": 34,
-    "five_min_expectancy_r": 0.657,
-    "five_min_option_trades": 17,
-    "five_min_option_usd_total": -236.0,
-    "five_min_profit_factor": 3.85,
-    "five_min_total_r": 22.33,
-    "hold_t2_expectancy_r": 1.095,
-    "hold_t2_option_trades": 17,
-    "hold_t2_option_usd_total": 573.0,
-    "hold_t2_profit_factor": 2.56,
-    "hold_t2_total_r": 37.23,
-    "median_minutes_to_t1": 10.0,
-    "setups": 128,
+    "filled": 37,
+    "five_min_expectancy_r": 0.766,
+    "five_min_option_trades": 20,
+    "five_min_option_usd_total": 593.0,
+    "five_min_profit_factor": 4.62,
+    "five_min_total_r": 28.33,
+    "hold_t2_expectancy_r": 1.14,
+    "hold_t2_option_trades": 20,
+    "hold_t2_option_usd_total": 764.0,
+    "hold_t2_profit_factor": 2.67,
+    "hold_t2_total_r": 42.18,
+    "median_minutes_to_t1": 10,
+    "setups": 136,
     "stop_rate": {
      "ci95": [
-      0.239,
-      0.55
+      0.218,
+      0.512
      ],
      "k": 13,
-     "n": 34,
-     "rate": 0.382
+     "n": 37,
+     "rate": 0.351
     },
     "t2_hit_rate": {
      "ci95": [
-      0.03,
-      0.23
+      0.028,
+      0.213
      ],
      "k": 3,
-     "n": 34,
-     "rate": 0.088
+     "n": 37,
+     "rate": 0.081
     },
     "trigger_rate": {
      "ci95": [
-      0.415,
-      0.585
+      0.417,
+      0.583
      ],
-     "k": 64,
-     "n": 128,
+     "k": 68,
+     "n": 136,
      "rate": 0.5
     },
-    "triggered": 64,
+    "triggered": 68,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.422,
-      0.736
+      0.461,
+      0.759
      ],
-     "k": 20,
-     "n": 34,
-     "rate": 0.588
+     "k": 23,
+     "n": 37,
+     "rate": 0.622
     }
    }
   },
   "bar_source": {
    "IBKR": {
-    "avg_mae_r": -0.96,
-    "avg_mfe_r": 1.7,
+    "avg_mae_r": -0.89,
+    "avg_mfe_r": 1.78,
     "bias_hit_rate": {
      "ci95": [
-      0.288,
-      0.548
+      0.297,
+      0.55
      ],
-     "k": 21,
-     "n": 51,
-     "rate": 0.412
+     "k": 23,
+     "n": 55,
+     "rate": 0.418
     },
-    "card_expectancy_r": 0.619,
-    "card_option_trades": 17,
-    "card_option_usd_total": -252.0,
-    "card_profit_factor": 2.15,
-    "card_total_r": 16.1,
+    "card_expectancy_r": 0.762,
+    "card_option_trades": 20,
+    "card_option_usd_total": 577.0,
+    "card_profit_factor": 2.57,
+    "card_total_r": 22.1,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.385,
-      0.652
+      0.406,
+      0.663
      ],
-     "k": 26,
-     "n": 50,
-     "rate": 0.52
+     "k": 29,
+     "n": 54,
+     "rate": 0.537
     },
-    "filled": 26,
-    "five_min_expectancy_r": 0.538,
-    "five_min_option_trades": 17,
-    "five_min_option_usd_total": -236.0,
-    "five_min_profit_factor": 3.26,
-    "five_min_total_r": 13.98,
-    "hold_t2_expectancy_r": 1.216,
-    "hold_t2_option_trades": 17,
-    "hold_t2_option_usd_total": 573.0,
-    "hold_t2_profit_factor": 2.67,
-    "hold_t2_total_r": 31.62,
-    "median_minutes_to_t1": 22,
-    "setups": 104,
+    "filled": 29,
+    "five_min_expectancy_r": 0.689,
+    "five_min_option_trades": 20,
+    "five_min_option_usd_total": 593.0,
+    "five_min_profit_factor": 4.23,
+    "five_min_total_r": 19.98,
+    "hold_t2_expectancy_r": 1.261,
+    "hold_t2_option_trades": 20,
+    "hold_t2_option_usd_total": 764.0,
+    "hold_t2_profit_factor": 2.81,
+    "hold_t2_total_r": 36.57,
+    "median_minutes_to_t1": 16.0,
+    "setups": 112,
     "stop_rate": {
      "ci95": [
-      0.224,
-      0.575
+      0.199,
+      0.527
      ],
      "k": 10,
-     "n": 26,
-     "rate": 0.385
+     "n": 29,
+     "rate": 0.345
     },
     "t2_hit_rate": {
      "ci95": [
-      0.04,
-      0.29
+      0.036,
+      0.264
      ],
      "k": 3,
-     "n": 26,
-     "rate": 0.115
+     "n": 29,
+     "rate": 0.103
     },
     "trigger_rate": {
      "ci95": [
-      0.387,
-      0.576
+      0.392,
+      0.574
      ],
-     "k": 50,
-     "n": 104,
-     "rate": 0.481
+     "k": 54,
+     "n": 112,
+     "rate": 0.482
     },
-    "triggered": 50,
+    "triggered": 54,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.389,
-      0.745
+      0.44,
+      0.773
      ],
-     "k": 15,
-     "n": 26,
-     "rate": 0.577
+     "k": 18,
+     "n": 29,
+     "rate": 0.621
     }
    },
    "Webull": {
@@ -471,80 +471,80 @@
   },
   "bias": {
    "breakout": {
-    "avg_mae_r": -1.35,
-    "avg_mfe_r": 1.37,
+    "avg_mae_r": -1.18,
+    "avg_mfe_r": 1.54,
     "bias_hit_rate": {
      "ci95": [
-      0.137,
-      0.461
+      0.173,
+      0.492
      ],
-     "k": 7,
-     "n": 26,
-     "rate": 0.269
+     "k": 9,
+     "n": 29,
+     "rate": 0.31
     },
-    "card_expectancy_r": -0.271,
-    "card_option_trades": 8,
-    "card_option_usd_total": -385.0,
-    "card_profit_factor": 0.7,
-    "card_total_r": -4.34,
+    "card_expectancy_r": 0.087,
+    "card_option_trades": 11,
+    "card_option_usd_total": 444.0,
+    "card_profit_factor": 1.11,
+    "card_total_r": 1.66,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.391,
-      0.735
+      0.438,
+      0.763
      ],
-     "k": 16,
-     "n": 28,
-     "rate": 0.571
+     "k": 19,
+     "n": 31,
+     "rate": 0.613
     },
-    "filled": 16,
-    "five_min_expectancy_r": 0.214,
-    "five_min_option_trades": 8,
-    "five_min_option_usd_total": -369.0,
-    "five_min_profit_factor": 1.72,
-    "five_min_total_r": 3.42,
-    "hold_t2_expectancy_r": 0.947,
-    "hold_t2_option_trades": 8,
-    "hold_t2_option_usd_total": 445.0,
-    "hold_t2_profit_factor": 2.04,
-    "hold_t2_total_r": 15.15,
-    "median_minutes_to_t1": 8,
-    "setups": 52,
+    "filled": 19,
+    "five_min_expectancy_r": 0.496,
+    "five_min_option_trades": 11,
+    "five_min_option_usd_total": 460.0,
+    "five_min_profit_factor": 2.99,
+    "five_min_total_r": 9.42,
+    "hold_t2_expectancy_r": 1.058,
+    "hold_t2_option_trades": 11,
+    "hold_t2_option_usd_total": 636.0,
+    "hold_t2_profit_factor": 2.27,
+    "hold_t2_total_r": 20.1,
+    "median_minutes_to_t1": 8.0,
+    "setups": 58,
     "stop_rate": {
      "ci95": [
-      0.386,
-      0.815
+      0.317,
+      0.727
      ],
      "k": 10,
-     "n": 16,
-     "rate": 0.625
+     "n": 19,
+     "rate": 0.526
     },
     "t2_hit_rate": {
      "ci95": [
-      0.011,
-      0.283
+      0.009,
+      0.246
      ],
      "k": 1,
-     "n": 16,
-     "rate": 0.062
+     "n": 19,
+     "rate": 0.053
     },
     "trigger_rate": {
      "ci95": [
-      0.405,
-      0.667
+      0.408,
+      0.657
      ],
-     "k": 28,
-     "n": 52,
-     "rate": 0.538
+     "k": 31,
+     "n": 58,
+     "rate": 0.534
     },
-    "triggered": 28,
+    "triggered": 31,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.142,
-      0.556
+      0.231,
+      0.637
      ],
-     "k": 5,
-     "n": 16,
-     "rate": 0.312
+     "k": 8,
+     "n": 19,
+     "rate": 0.421
     }
    },
    "range": {
@@ -629,12 +629,12 @@
     "avg_mfe_r": 1.95,
     "bias_hit_rate": {
      "ci95": [
-      0.384,
-      0.69
+      0.373,
+      0.675
      ],
      "k": 20,
-     "n": 37,
-     "rate": 0.541
+     "n": 38,
+     "rate": 0.526
     },
     "card_expectancy_r": 1.483,
     "card_option_trades": 9,
@@ -643,12 +643,12 @@
     "card_total_r": 26.7,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.345,
-      0.655
+      0.334,
+      0.641
      ],
      "k": 18,
-     "n": 36,
-     "rate": 0.5
+     "n": 37,
+     "rate": 0.486
     },
     "filled": 18,
     "five_min_expectancy_r": 1.051,
@@ -662,7 +662,7 @@
     "hold_t2_profit_factor": 3.35,
     "hold_t2_total_r": 22.08,
     "median_minutes_to_t1": 22,
-    "setups": 74,
+    "setups": 76,
     "stop_rate": {
      "ci95": [
       0.058,
@@ -683,14 +683,14 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.376,
-      0.598
+      0.378,
+      0.597
      ],
-     "k": 36,
-     "n": 74,
-     "rate": 0.486
+     "k": 37,
+     "n": 76,
+     "rate": 0.487
     },
-    "triggered": 36,
+    "triggered": 37,
     "win_rate_t1_before_stop": {
      "ci95": [
       0.608,
@@ -704,80 +704,80 @@
   },
   "card_source": {
    "published": {
-    "avg_mae_r": -0.97,
-    "avg_mfe_r": 1.68,
+    "avg_mae_r": -0.91,
+    "avg_mfe_r": 1.74,
     "bias_hit_rate": {
      "ci95": [
-      0.314,
-      0.551
+      0.321,
+      0.552
      ],
-     "k": 27,
-     "n": 63,
-     "rate": 0.429
+     "k": 29,
+     "n": 67,
+     "rate": 0.433
     },
-    "card_expectancy_r": 0.658,
-    "card_option_trades": 17,
-    "card_option_usd_total": -252.0,
-    "card_profit_factor": 2.26,
-    "card_total_r": 22.36,
+    "card_expectancy_r": 0.766,
+    "card_option_trades": 20,
+    "card_option_usd_total": 577.0,
+    "card_profit_factor": 2.59,
+    "card_total_r": 28.36,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.411,
-      0.648
+      0.427,
+      0.657
      ],
-     "k": 34,
-     "n": 64,
-     "rate": 0.531
+     "k": 37,
+     "n": 68,
+     "rate": 0.544
     },
-    "filled": 34,
-    "five_min_expectancy_r": 0.657,
-    "five_min_option_trades": 17,
-    "five_min_option_usd_total": -236.0,
-    "five_min_profit_factor": 3.85,
-    "five_min_total_r": 22.33,
-    "hold_t2_expectancy_r": 1.095,
-    "hold_t2_option_trades": 17,
-    "hold_t2_option_usd_total": 573.0,
-    "hold_t2_profit_factor": 2.56,
-    "hold_t2_total_r": 37.23,
-    "median_minutes_to_t1": 10.0,
-    "setups": 128,
+    "filled": 37,
+    "five_min_expectancy_r": 0.766,
+    "five_min_option_trades": 20,
+    "five_min_option_usd_total": 593.0,
+    "five_min_profit_factor": 4.62,
+    "five_min_total_r": 28.33,
+    "hold_t2_expectancy_r": 1.14,
+    "hold_t2_option_trades": 20,
+    "hold_t2_option_usd_total": 764.0,
+    "hold_t2_profit_factor": 2.67,
+    "hold_t2_total_r": 42.18,
+    "median_minutes_to_t1": 10,
+    "setups": 136,
     "stop_rate": {
      "ci95": [
-      0.239,
-      0.55
+      0.218,
+      0.512
      ],
      "k": 13,
-     "n": 34,
-     "rate": 0.382
+     "n": 37,
+     "rate": 0.351
     },
     "t2_hit_rate": {
      "ci95": [
-      0.03,
-      0.23
+      0.028,
+      0.213
      ],
      "k": 3,
-     "n": 34,
-     "rate": 0.088
+     "n": 37,
+     "rate": 0.081
     },
     "trigger_rate": {
      "ci95": [
-      0.415,
-      0.585
+      0.417,
+      0.583
      ],
-     "k": 64,
-     "n": 128,
+     "k": 68,
+     "n": 136,
      "rate": 0.5
     },
-    "triggered": 64,
+    "triggered": 68,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.422,
-      0.736
+      0.461,
+      0.759
      ],
-     "k": 20,
-     "n": 34,
-     "rate": 0.588
+     "k": 23,
+     "n": 37,
+     "rate": 0.622
     }
    }
   },
@@ -787,12 +787,12 @@
     "avg_mfe_r": 1.6,
     "bias_hit_rate": {
      "ci95": [
-      0.255,
-      0.577
+      0.247,
+      0.563
      ],
      "k": 13,
-     "n": 32,
-     "rate": 0.406
+     "n": 33,
+     "rate": 0.394
     },
     "card_expectancy_r": 0.28,
     "card_option_trades": 8,
@@ -801,12 +801,12 @@
     "card_total_r": 3.92,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.282,
-      0.607
+      0.272,
+      0.592
      ],
      "k": 14,
-     "n": 32,
-     "rate": 0.438
+     "n": 33,
+     "rate": 0.424
     },
     "filled": 14,
     "five_min_expectancy_r": 0.016,
@@ -820,7 +820,7 @@
     "hold_t2_profit_factor": 1.66,
     "hold_t2_total_r": 8.28,
     "median_minutes_to_t1": 184,
-    "setups": 32,
+    "setups": 33,
     "stop_rate": {
      "ci95": [
       0.268,
@@ -841,14 +841,14 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.893,
+      0.896,
       1.0
      ],
-     "k": 32,
-     "n": 32,
+     "k": 33,
+     "n": 33,
      "rate": 1.0
     },
-    "triggered": 32,
+    "triggered": 33,
     "win_rate_t1_before_stop": {
      "ci95": [
       0.268,
@@ -864,12 +864,12 @@
     "avg_mfe_r": 1.47,
     "bias_hit_rate": {
      "ci95": [
-      0.255,
-      0.577
+      0.247,
+      0.563
      ],
      "k": 13,
-     "n": 32,
-     "rate": 0.406
+     "n": 33,
+     "rate": 0.394
     },
     "card_expectancy_r": 0.16,
     "card_option_trades": 1,
@@ -897,7 +897,7 @@
     "hold_t2_profit_factor": null,
     "hold_t2_total_r": 0.16,
     "median_minutes_to_t1": null,
-    "setups": 32,
+    "setups": 33,
     "stop_rate": {
      "ci95": [
       0.0,
@@ -918,12 +918,12 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.006,
-      0.157
+      0.005,
+      0.153
      ],
      "k": 1,
-     "n": 32,
-     "rate": 0.031
+     "n": 33,
+     "rate": 0.03
     },
     "triggered": 1,
     "win_rate_t1_before_stop": {
@@ -937,236 +937,236 @@
     }
    },
    "medium": {
-    "avg_mae_r": -0.8,
-    "avg_mfe_r": 1.75,
+    "avg_mae_r": -0.72,
+    "avg_mfe_r": 1.84,
     "bias_hit_rate": {
      "ci95": [
-      0.292,
-      0.622
+      0.315,
+      0.633
      ],
-     "k": 14,
-     "n": 31,
-     "rate": 0.452
+     "k": 16,
+     "n": 34,
+     "rate": 0.471
     },
-    "card_expectancy_r": 0.962,
-    "card_option_trades": 8,
-    "card_option_usd_total": -86.0,
-    "card_profit_factor": 3.37,
-    "card_total_r": 18.28,
+    "card_expectancy_r": 1.104,
+    "card_option_trades": 11,
+    "card_option_usd_total": 743.0,
+    "card_profit_factor": 4.15,
+    "card_total_r": 24.28,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.438,
-      0.763
+      0.479,
+      0.785
      ],
-     "k": 19,
-     "n": 31,
-     "rate": 0.613
+     "k": 22,
+     "n": 34,
+     "rate": 0.647
     },
-    "filled": 19,
-    "five_min_expectancy_r": 1.155,
-    "five_min_option_trades": 8,
-    "five_min_option_usd_total": -24.0,
-    "five_min_profit_factor": 11.71,
-    "five_min_total_r": 21.95,
-    "hold_t2_expectancy_r": 1.515,
-    "hold_t2_option_trades": 8,
-    "hold_t2_option_usd_total": 964.0,
-    "hold_t2_profit_factor": 3.56,
-    "hold_t2_total_r": 28.79,
-    "median_minutes_to_t1": 8,
-    "setups": 64,
+    "filled": 22,
+    "five_min_expectancy_r": 1.27,
+    "five_min_option_trades": 11,
+    "five_min_option_usd_total": 805.0,
+    "five_min_profit_factor": 14.63,
+    "five_min_total_r": 27.95,
+    "hold_t2_expectancy_r": 1.534,
+    "hold_t2_option_trades": 11,
+    "hold_t2_option_usd_total": 1155.0,
+    "hold_t2_profit_factor": 3.68,
+    "hold_t2_total_r": 33.74,
+    "median_minutes_to_t1": 8.0,
+    "setups": 70,
     "stop_rate": {
      "ci95": [
-      0.154,
-      0.54
+      0.132,
+      0.482
      ],
      "k": 6,
-     "n": 19,
-     "rate": 0.316
+     "n": 22,
+     "rate": 0.273
     },
     "t2_hit_rate": {
      "ci95": [
-      0.055,
-      0.376
+      0.047,
+      0.333
      ],
      "k": 3,
-     "n": 19,
-     "rate": 0.158
+     "n": 22,
+     "rate": 0.136
     },
     "trigger_rate": {
      "ci95": [
-      0.366,
-      0.604
+      0.372,
+      0.6
      ],
-     "k": 31,
-     "n": 64,
-     "rate": 0.484
+     "k": 34,
+     "n": 70,
+     "rate": 0.486
     },
-    "triggered": 31,
+    "triggered": 34,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.46,
-      0.846
+      0.518,
+      0.868
      ],
-     "k": 13,
-     "n": 19,
-     "rate": 0.684
+     "k": 16,
+     "n": 22,
+     "rate": 0.727
     }
    }
   },
   "distance": {
    "0.5-1 ATR": {
-    "avg_mae_r": -0.49,
-    "avg_mfe_r": 2.05,
+    "avg_mae_r": -0.37,
+    "avg_mfe_r": 2.04,
     "bias_hit_rate": {
      "ci95": [
-      0.109,
-      0.52
+      0.133,
+      0.531
      ],
-     "k": 4,
-     "n": 15,
-     "rate": 0.267
+     "k": 5,
+     "n": 17,
+     "rate": 0.294
     },
     "card_expectancy_r": 2.0,
-    "card_option_trades": 1,
-    "card_option_usd_total": 50.0,
+    "card_option_trades": 2,
+    "card_option_usd_total": 134.0,
     "card_profit_factor": null,
-    "card_total_r": 6.0,
+    "card_total_r": 8.0,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.438,
+      0.51,
       1.0
      ],
-     "k": 3,
-     "n": 3,
+     "k": 4,
+     "n": 4,
      "rate": 1.0
     },
-    "filled": 3,
+    "filled": 4,
     "five_min_expectancy_r": 2.0,
-    "five_min_option_trades": 1,
-    "five_min_option_usd_total": 50.0,
+    "five_min_option_trades": 2,
+    "five_min_option_usd_total": 134.0,
     "five_min_profit_factor": null,
-    "five_min_total_r": 6.0,
-    "hold_t2_expectancy_r": 2.503,
-    "hold_t2_option_trades": 1,
-    "hold_t2_option_usd_total": -43.0,
-    "hold_t2_profit_factor": 7.71,
-    "hold_t2_total_r": 7.51,
-    "median_minutes_to_t1": 10,
-    "setups": 16,
+    "five_min_total_r": 8.0,
+    "hold_t2_expectancy_r": 2.228,
+    "hold_t2_option_trades": 2,
+    "hold_t2_option_usd_total": 8.0,
+    "hold_t2_profit_factor": 8.96,
+    "hold_t2_total_r": 8.91,
+    "median_minutes_to_t1": 17.0,
+    "setups": 18,
     "stop_rate": {
      "ci95": [
       0.0,
-      0.562
+      0.49
      ],
      "k": 0,
-     "n": 3,
+     "n": 4,
      "rate": 0.0
     },
     "t2_hit_rate": {
      "ci95": [
       0.0,
-      0.562
+      0.49
      ],
      "k": 0,
-     "n": 3,
+     "n": 4,
      "rate": 0.0
     },
     "trigger_rate": {
      "ci95": [
-      0.066,
-      0.43
+      0.09,
+      0.452
      ],
-     "k": 3,
-     "n": 16,
-     "rate": 0.188
+     "k": 4,
+     "n": 18,
+     "rate": 0.222
     },
-    "triggered": 3,
+    "triggered": 4,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.438,
+      0.51,
       1.0
      ],
-     "k": 3,
-     "n": 3,
+     "k": 4,
+     "n": 4,
      "rate": 1.0
     }
    },
    "<0.5 ATR": {
-    "avg_mae_r": -1.04,
-    "avg_mfe_r": 1.62,
+    "avg_mae_r": -0.99,
+    "avg_mfe_r": 1.68,
     "bias_hit_rate": {
      "ci95": [
-      0.305,
-      0.543
+      0.312,
+      0.544
      ],
-     "k": 26,
-     "n": 62,
-     "rate": 0.419
+     "k": 28,
+     "n": 66,
+     "rate": 0.424
     },
-    "card_expectancy_r": 0.479,
-    "card_option_trades": 15,
-    "card_option_usd_total": -216.0,
-    "card_profit_factor": 1.81,
-    "card_total_r": 14.36,
+    "card_expectancy_r": 0.574,
+    "card_option_trades": 17,
+    "card_option_usd_total": 529.0,
+    "card_profit_factor": 2.03,
+    "card_total_r": 18.36,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.377,
-      0.623
+      0.388,
+      0.627
      ],
-     "k": 30,
-     "n": 60,
-     "rate": 0.5
+     "k": 32,
+     "n": 63,
+     "rate": 0.508
     },
-    "filled": 30,
-    "five_min_expectancy_r": 0.478,
-    "five_min_option_trades": 15,
-    "five_min_option_usd_total": -200.0,
-    "five_min_profit_factor": 2.83,
-    "five_min_total_r": 14.33,
-    "hold_t2_expectancy_r": 0.834,
-    "hold_t2_option_trades": 15,
-    "hold_t2_option_usd_total": 702.0,
-    "hold_t2_profit_factor": 2.1,
-    "hold_t2_total_r": 25.02,
-    "median_minutes_to_t1": 9.0,
-    "setups": 105,
+    "filled": 32,
+    "five_min_expectancy_r": 0.573,
+    "five_min_option_trades": 17,
+    "five_min_option_usd_total": 545.0,
+    "five_min_profit_factor": 3.34,
+    "five_min_total_r": 18.33,
+    "hold_t2_expectancy_r": 0.893,
+    "hold_t2_option_trades": 17,
+    "hold_t2_option_usd_total": 842.0,
+    "hold_t2_profit_factor": 2.18,
+    "hold_t2_total_r": 28.57,
+    "median_minutes_to_t1": 8.0,
+    "setups": 111,
     "stop_rate": {
      "ci95": [
-      0.274,
-      0.608
+      0.255,
+      0.577
      ],
      "k": 13,
-     "n": 30,
-     "rate": 0.433
+     "n": 32,
+     "rate": 0.406
     },
     "t2_hit_rate": {
      "ci95": [
-      0.018,
-      0.213
+      0.017,
+      0.201
      ],
      "k": 2,
-     "n": 30,
-     "rate": 0.067
+     "n": 32,
+     "rate": 0.062
     },
     "trigger_rate": {
      "ci95": [
-      0.476,
-      0.662
+      0.475,
+      0.656
      ],
-     "k": 60,
-     "n": 105,
-     "rate": 0.571
+     "k": 63,
+     "n": 111,
+     "rate": 0.568
     },
-    "triggered": 60,
+    "triggered": 63,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.361,
-      0.698
+      0.393,
+      0.718
      ],
-     "k": 16,
-     "n": 30,
-     "rate": 0.533
+     "k": 18,
+     "n": 32,
+     "rate": 0.562
     }
    },
    ">1 ATR": {
@@ -1331,10 +1331,10 @@
     "bias_hit_rate": {
      "ci95": [
       0.0,
-      0.184
+      0.176
      ],
      "k": 0,
-     "n": 17,
+     "n": 18,
      "rate": 0.0
     },
     "card_expectancy_r": 0.92,
@@ -1344,12 +1344,12 @@
     "card_total_r": 5.52,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.173,
-      0.587
+      0.163,
+      0.563
      ],
      "k": 6,
-     "n": 17,
-     "rate": 0.353
+     "n": 18,
+     "rate": 0.333
     },
     "filled": 6,
     "five_min_expectancy_r": 0.333,
@@ -1363,7 +1363,7 @@
     "hold_t2_profit_factor": 1.87,
     "hold_t2_total_r": 4.39,
     "median_minutes_to_t1": 22.0,
-    "setups": 34,
+    "setups": 36,
     "stop_rate": {
      "ci95": [
       0.097,
@@ -1384,14 +1384,14 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.341,
-      0.659
+      0.345,
+      0.655
      ],
-     "k": 17,
-     "n": 34,
+     "k": 18,
+     "n": 36,
      "rate": 0.5
     },
-    "triggered": 17,
+    "triggered": 18,
     "win_rate_t1_before_stop": {
      "ci95": [
       0.3,
@@ -1403,80 +1403,80 @@
     }
    },
    "inside": {
-    "avg_mae_r": -0.84,
-    "avg_mfe_r": 1.69,
+    "avg_mae_r": -0.75,
+    "avg_mfe_r": 1.8,
     "bias_hit_rate": {
      "ci95": [
-      0.245,
-      0.593
+      0.274,
+      0.608
      ],
-     "k": 11,
-     "n": 27,
-     "rate": 0.407
+     "k": 13,
+     "n": 30,
+     "rate": 0.433
     },
-    "card_expectancy_r": 0.767,
-    "card_option_trades": 8,
-    "card_option_usd_total": -86.0,
-    "card_profit_factor": 2.59,
-    "card_total_r": 12.28,
+    "card_expectancy_r": 0.962,
+    "card_option_trades": 11,
+    "card_option_usd_total": 743.0,
+    "card_profit_factor": 3.37,
+    "card_total_r": 18.28,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.407,
-      0.755
+      0.455,
+      0.781
      ],
-     "k": 16,
-     "n": 27,
-     "rate": 0.593
+     "k": 19,
+     "n": 30,
+     "rate": 0.633
     },
-    "filled": 16,
-    "five_min_expectancy_r": 0.997,
-    "five_min_option_trades": 8,
-    "five_min_option_usd_total": -24.0,
-    "five_min_profit_factor": 8.78,
-    "five_min_total_r": 15.95,
-    "hold_t2_expectancy_r": 1.284,
-    "hold_t2_option_trades": 8,
-    "hold_t2_option_usd_total": 964.0,
-    "hold_t2_profit_factor": 3.06,
-    "hold_t2_total_r": 20.55,
-    "median_minutes_to_t1": 6.0,
-    "setups": 56,
+    "filled": 19,
+    "five_min_expectancy_r": 1.155,
+    "five_min_option_trades": 11,
+    "five_min_option_usd_total": 805.0,
+    "five_min_profit_factor": 11.71,
+    "five_min_total_r": 21.95,
+    "hold_t2_expectancy_r": 1.342,
+    "hold_t2_option_trades": 11,
+    "hold_t2_option_usd_total": 1155.0,
+    "hold_t2_profit_factor": 3.25,
+    "hold_t2_total_r": 25.5,
+    "median_minutes_to_t1": 6,
+    "setups": 62,
     "stop_rate": {
      "ci95": [
-      0.185,
-      0.614
+      0.154,
+      0.54
      ],
      "k": 6,
-     "n": 16,
-     "rate": 0.375
+     "n": 19,
+     "rate": 0.316
     },
     "t2_hit_rate": {
      "ci95": [
-      0.066,
-      0.43
+      0.055,
+      0.376
      ],
      "k": 3,
-     "n": 16,
-     "rate": 0.188
+     "n": 19,
+     "rate": 0.158
     },
     "trigger_rate": {
      "ci95": [
-      0.357,
-      0.61
+      0.364,
+      0.606
      ],
-     "k": 27,
-     "n": 56,
-     "rate": 0.482
+     "k": 30,
+     "n": 62,
+     "rate": 0.484
     },
-    "triggered": 27,
+    "triggered": 30,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.386,
-      0.815
+      0.46,
+      0.846
      ],
-     "k": 10,
-     "n": 16,
-     "rate": 0.625
+     "k": 13,
+     "n": 19,
+     "rate": 0.684
     }
    },
    "unknown": {
@@ -1867,157 +1867,157 @@
     }
    },
    "PDH": {
-    "avg_mae_r": -1.08,
-    "avg_mfe_r": 1.72,
+    "avg_mae_r": -1.03,
+    "avg_mfe_r": 1.77,
     "bias_hit_rate": {
      "ci95": [
-      0.301,
-      0.603
+      0.299,
+      0.59
      ],
-     "k": 17,
-     "n": 38,
-     "rate": 0.447
+     "k": 18,
+     "n": 41,
+     "rate": 0.439
     },
-    "card_expectancy_r": 0.714,
-    "card_option_trades": 8,
-    "card_option_usd_total": -300.0,
-    "card_profit_factor": 2.28,
-    "card_total_r": 7.85,
+    "card_expectancy_r": 0.821,
+    "card_option_trades": 9,
+    "card_option_usd_total": -129.0,
+    "card_profit_factor": 2.6,
+    "card_total_r": 9.85,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.363,
-      0.769
+      0.387,
+      0.781
      ],
-     "k": 11,
-     "n": 19,
-     "rate": 0.579
+     "k": 12,
+     "n": 20,
+     "rate": 0.6
     },
-    "filled": 11,
-    "five_min_expectancy_r": 0.655,
-    "five_min_option_trades": 8,
-    "five_min_option_usd_total": -238.0,
-    "five_min_profit_factor": 3.57,
-    "five_min_total_r": 7.2,
-    "hold_t2_expectancy_r": 0.914,
-    "hold_t2_option_trades": 8,
-    "hold_t2_option_usd_total": -393.0,
-    "hold_t2_profit_factor": 2.38,
-    "hold_t2_total_r": 10.05,
-    "median_minutes_to_t1": 22,
-    "setups": 38,
+    "filled": 12,
+    "five_min_expectancy_r": 0.767,
+    "five_min_option_trades": 9,
+    "five_min_option_usd_total": -67.0,
+    "five_min_profit_factor": 4.29,
+    "five_min_total_r": 9.2,
+    "hold_t2_expectancy_r": 1.245,
+    "hold_t2_option_trades": 9,
+    "hold_t2_option_usd_total": 51.0,
+    "hold_t2_profit_factor": 3.06,
+    "hold_t2_total_r": 14.94,
+    "median_minutes_to_t1": 16.0,
+    "setups": 41,
     "stop_rate": {
      "ci95": [
-      0.152,
-      0.646
+      0.138,
+      0.609
      ],
      "k": 4,
-     "n": 11,
-     "rate": 0.364
+     "n": 12,
+     "rate": 0.333
     },
     "t2_hit_rate": {
      "ci95": [
-      0.016,
-      0.377
+      0.015,
+      0.354
      ],
      "k": 1,
-     "n": 11,
-     "rate": 0.091
+     "n": 12,
+     "rate": 0.083
     },
     "trigger_rate": {
      "ci95": [
-      0.348,
-      0.652
+      0.343,
+      0.635
      ],
-     "k": 19,
-     "n": 38,
-     "rate": 0.5
+     "k": 20,
+     "n": 41,
+     "rate": 0.488
     },
-    "triggered": 19,
+    "triggered": 20,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.354,
-      0.848
+      0.391,
+      0.862
      ],
-     "k": 7,
-     "n": 11,
-     "rate": 0.636
+     "k": 8,
+     "n": 12,
+     "rate": 0.667
     }
    },
    "PDL": {
-    "avg_mae_r": -0.5,
-    "avg_mfe_r": 1.92,
+    "avg_mae_r": -0.45,
+    "avg_mfe_r": 1.93,
     "bias_hit_rate": {
      "ci95": [
-      0.256,
-      0.553
+      0.263,
+      0.554
      ],
-     "k": 15,
-     "n": 38,
-     "rate": 0.395
+     "k": 16,
+     "n": 40,
+     "rate": 0.4
     },
-    "card_expectancy_r": 1.363,
-    "card_option_trades": 5,
-    "card_option_usd_total": 28.0,
-    "card_profit_factor": 9.65,
-    "card_total_r": 10.9,
+    "card_expectancy_r": 1.433,
+    "card_option_trades": 6,
+    "card_option_usd_total": 112.0,
+    "card_profit_factor": 11.24,
+    "card_total_r": 12.9,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.231,
-      0.637
+      0.258,
+      0.658
      ],
-     "k": 8,
-     "n": 19,
-     "rate": 0.421
+     "k": 9,
+     "n": 20,
+     "rate": 0.45
     },
-    "filled": 8,
-    "five_min_expectancy_r": 1.194,
-    "five_min_option_trades": 5,
-    "five_min_option_usd_total": 28.0,
-    "five_min_profit_factor": 16.66,
-    "five_min_total_r": 9.55,
-    "hold_t2_expectancy_r": 3.587,
-    "hold_t2_option_trades": 5,
-    "hold_t2_option_usd_total": 1307.0,
-    "hold_t2_profit_factor": 12.43,
-    "hold_t2_total_r": 28.7,
-    "median_minutes_to_t1": 9.0,
-    "setups": 38,
+    "filled": 9,
+    "five_min_expectancy_r": 1.283,
+    "five_min_option_trades": 6,
+    "five_min_option_usd_total": 112.0,
+    "five_min_profit_factor": 19.93,
+    "five_min_total_r": 11.55,
+    "hold_t2_expectancy_r": 3.344,
+    "hold_t2_option_trades": 6,
+    "hold_t2_option_usd_total": 1358.0,
+    "hold_t2_profit_factor": 12.99,
+    "hold_t2_total_r": 30.1,
+    "median_minutes_to_t1": 10,
+    "setups": 40,
     "stop_rate": {
      "ci95": [
-      0.022,
-      0.471
+      0.02,
+      0.435
      ],
      "k": 1,
-     "n": 8,
-     "rate": 0.125
+     "n": 9,
+     "rate": 0.111
     },
     "t2_hit_rate": {
      "ci95": [
-      0.071,
-      0.591
+      0.063,
+      0.547
      ],
      "k": 2,
-     "n": 8,
-     "rate": 0.25
+     "n": 9,
+     "rate": 0.222
     },
     "trigger_rate": {
      "ci95": [
-      0.348,
-      0.652
+      0.352,
+      0.648
      ],
-     "k": 19,
-     "n": 38,
+     "k": 20,
+     "n": 40,
      "rate": 0.5
     },
-    "triggered": 19,
+    "triggered": 20,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.409,
-      0.929
+      0.453,
+      0.937
      ],
-     "k": 6,
-     "n": 8,
-     "rate": 0.75
+     "k": 7,
+     "n": 9,
+     "rate": 0.778
     }
    },
    "PMH": {
@@ -2102,11 +2102,11 @@
     "avg_mfe_r": 1.48,
     "bias_hit_rate": {
      "ci95": [
-      0.15,
-      0.85
+      0.188,
+      0.812
      ],
-     "k": 2,
-     "n": 4,
+     "k": 3,
+     "n": 6,
      "rate": 0.5
     },
     "card_expectancy_r": -1.57,
@@ -2116,12 +2116,12 @@
     "card_total_r": -1.57,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.207,
-      1.0
+      0.095,
+      0.905
      ],
      "k": 1,
-     "n": 1,
-     "rate": 1.0
+     "n": 2,
+     "rate": 0.5
     },
     "filled": 1,
     "five_min_expectancy_r": -0.49,
@@ -2135,7 +2135,7 @@
     "hold_t2_profit_factor": 0.0,
     "hold_t2_total_r": -1.57,
     "median_minutes_to_t1": null,
-    "setups": 5,
+    "setups": 7,
     "stop_rate": {
      "ci95": [
       0.207,
@@ -2156,14 +2156,14 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.036,
-      0.624
+      0.082,
+      0.641
      ],
-     "k": 1,
-     "n": 5,
-     "rate": 0.2
+     "k": 2,
+     "n": 7,
+     "rate": 0.286
     },
-    "triggered": 1,
+    "triggered": 2,
     "win_rate_t1_before_stop": {
      "ci95": [
       0.0,
@@ -2175,23 +2175,45 @@
     }
    },
    "PWH": {
-    "avg_mae_r": -1.41,
-    "avg_mfe_r": 1.14,
+    "avg_mae_r": -1.03,
+    "avg_mfe_r": 1.72,
     "bias_hit_rate": {
      "ci95": [
-      0.137,
-      0.694
+      0.189,
+      0.733
+     ],
+     "k": 4,
+     "n": 9,
+     "rate": 0.444
+    },
+    "card_expectancy_r": -0.16,
+    "card_option_trades": 1,
+    "card_option_usd_total": 574.0,
+    "card_profit_factor": 0.81,
+    "card_total_r": -0.48,
+    "fill_rate_of_triggered": {
+     "ci95": [
+      0.301,
+      0.954
      ],
      "k": 3,
-     "n": 8,
-     "rate": 0.375
+     "n": 4,
+     "rate": 0.75
     },
-    "card_expectancy_r": -1.24,
-    "card_option_trades": 0,
-    "card_option_usd_total": null,
-    "card_profit_factor": 0.0,
-    "card_total_r": -2.48,
-    "fill_rate_of_triggered": {
+    "filled": 3,
+    "five_min_expectancy_r": 0.14,
+    "five_min_option_trades": 1,
+    "five_min_option_usd_total": 574.0,
+    "five_min_profit_factor": 1.27,
+    "five_min_total_r": 0.42,
+    "hold_t2_expectancy_r": -1.273,
+    "hold_t2_option_trades": 1,
+    "hold_t2_option_usd_total": -304.0,
+    "hold_t2_profit_factor": 0.0,
+    "hold_t2_total_r": -3.82,
+    "median_minutes_to_t1": 6,
+    "setups": 9,
+    "stop_rate": {
      "ci95": [
       0.208,
       0.939
@@ -2200,55 +2222,33 @@
      "n": 3,
      "rate": 0.667
     },
-    "filled": 2,
-    "five_min_expectancy_r": -0.79,
-    "five_min_option_trades": 0,
-    "five_min_option_usd_total": null,
-    "five_min_profit_factor": 0.0,
-    "five_min_total_r": -1.58,
-    "hold_t2_expectancy_r": -1.24,
-    "hold_t2_option_trades": 0,
-    "hold_t2_option_usd_total": null,
-    "hold_t2_profit_factor": 0.0,
-    "hold_t2_total_r": -2.48,
-    "median_minutes_to_t1": null,
-    "setups": 8,
-    "stop_rate": {
-     "ci95": [
-      0.342,
-      1.0
-     ],
-     "k": 2,
-     "n": 2,
-     "rate": 1.0
-    },
     "t2_hit_rate": {
      "ci95": [
       0.0,
-      0.658
+      0.562
      ],
      "k": 0,
-     "n": 2,
+     "n": 3,
      "rate": 0.0
     },
     "trigger_rate": {
      "ci95": [
-      0.137,
-      0.694
+      0.189,
+      0.733
      ],
-     "k": 3,
-     "n": 8,
-     "rate": 0.375
+     "k": 4,
+     "n": 9,
+     "rate": 0.444
     },
-    "triggered": 3,
+    "triggered": 4,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.0,
-      0.658
+      0.061,
+      0.792
      ],
-     "k": 0,
-     "n": 2,
-     "rate": 0.0
+     "k": 1,
+     "n": 3,
+     "rate": 0.333
     }
    },
    "PWL": {
@@ -2408,80 +2408,80 @@
   },
   "open_gap": {
    "opened_inside": {
-    "avg_mae_r": -0.76,
-    "avg_mfe_r": 1.81,
+    "avg_mae_r": -0.69,
+    "avg_mfe_r": 1.9,
     "bias_hit_rate": {
      "ci95": [
-      0.3,
-      0.665
+      0.326,
+      0.674
      ],
-     "k": 12,
-     "n": 25,
-     "rate": 0.48
+     "k": 14,
+     "n": 28,
+     "rate": 0.5
     },
-    "card_expectancy_r": 1.024,
-    "card_option_trades": 7,
-    "card_option_usd_total": -55.0,
-    "card_profit_factor": 3.64,
-    "card_total_r": 17.41,
+    "card_expectancy_r": 1.171,
+    "card_option_trades": 10,
+    "card_option_usd_total": 774.0,
+    "card_profit_factor": 4.55,
+    "card_total_r": 23.41,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.535,
-      0.875
+      0.579,
+      0.89
      ],
-     "k": 17,
-     "n": 23,
-     "rate": 0.739
+     "k": 20,
+     "n": 26,
+     "rate": 0.769
     },
-    "filled": 17,
-    "five_min_expectancy_r": 1.142,
-    "five_min_option_trades": 7,
-    "five_min_option_usd_total": -55.0,
-    "five_min_profit_factor": 8.49,
-    "five_min_total_r": 19.41,
-    "hold_t2_expectancy_r": 2.08,
-    "hold_t2_option_trades": 7,
-    "hold_t2_option_usd_total": 1033.0,
-    "hold_t2_profit_factor": 4.49,
-    "hold_t2_total_r": 35.36,
-    "median_minutes_to_t1": 8.0,
-    "setups": 52,
+    "filled": 20,
+    "five_min_expectancy_r": 1.27,
+    "five_min_option_trades": 10,
+    "five_min_option_usd_total": 774.0,
+    "five_min_profit_factor": 10.81,
+    "five_min_total_r": 25.41,
+    "hold_t2_expectancy_r": 2.015,
+    "hold_t2_option_trades": 10,
+    "hold_t2_option_usd_total": 1224.0,
+    "hold_t2_profit_factor": 4.52,
+    "hold_t2_total_r": 40.31,
+    "median_minutes_to_t1": 8,
+    "setups": 58,
     "stop_rate": {
      "ci95": [
-      0.133,
-      0.531
+      0.112,
+      0.469
      ],
      "k": 5,
-     "n": 17,
-     "rate": 0.294
+     "n": 20,
+     "rate": 0.25
     },
     "t2_hit_rate": {
      "ci95": [
-      0.062,
-      0.41
+      0.052,
+      0.36
      ],
      "k": 3,
-     "n": 17,
-     "rate": 0.176
+     "n": 20,
+     "rate": 0.15
     },
     "trigger_rate": {
      "ci95": [
-      0.316,
-      0.577
+      0.327,
+      0.575
      ],
-     "k": 23,
-     "n": 52,
-     "rate": 0.442
+     "k": 26,
+     "n": 58,
+     "rate": 0.448
     },
-    "triggered": 23,
+    "triggered": 26,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.469,
-      0.867
+      0.531,
+      0.888
      ],
-     "k": 12,
-     "n": 17,
-     "rate": 0.706
+     "k": 15,
+     "n": 20,
+     "rate": 0.75
     }
    },
    "opened_over_ceiling": {
@@ -2566,11 +2566,11 @@
     "avg_mfe_r": 1.49,
     "bias_hit_rate": {
      "ci95": [
-      -0.0,
-      0.161
+      0.0,
+      0.155
      ],
      "k": 0,
-     "n": 20,
+     "n": 21,
      "rate": 0.0
     },
     "card_expectancy_r": 0.385,
@@ -2580,12 +2580,12 @@
     "card_total_r": 3.08,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.208,
-      0.591
+      0.197,
+      0.57
      ],
      "k": 8,
-     "n": 21,
-     "rate": 0.381
+     "n": 22,
+     "rate": 0.364
     },
     "filled": 8,
     "five_min_expectancy_r": 0.184,
@@ -2599,7 +2599,7 @@
     "hold_t2_profit_factor": 0.49,
     "hold_t2_total_r": -3.82,
     "median_minutes_to_t1": 79.0,
-    "setups": 40,
+    "setups": 42,
     "stop_rate": {
      "ci95": [
       0.215,
@@ -2620,14 +2620,14 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.375,
-      0.671
+      0.377,
+      0.666
      ],
-     "k": 21,
-     "n": 40,
-     "rate": 0.525
+     "k": 22,
+     "n": 42,
+     "rate": 0.524
     },
-    "triggered": 21,
+    "triggered": 22,
     "win_rate_t1_before_stop": {
      "ci95": [
       0.215,
@@ -2641,206 +2641,52 @@
   },
   "rank": {
    "1": {
-    "avg_mae_r": -1.16,
-    "avg_mfe_r": 1.59,
+    "avg_mae_r": -1.03,
+    "avg_mfe_r": 1.64,
     "bias_hit_rate": {
      "ci95": [
-      0.332,
-      0.769
+      0.31,
+      0.738
      ],
      "k": 9,
-     "n": 16,
-     "rate": 0.562
-    },
-    "card_expectancy_r": 0.77,
-    "card_option_trades": 2,
-    "card_option_usd_total": -118.0,
-    "card_profit_factor": 2.6,
-    "card_total_r": 6.16,
-    "fill_rate_of_triggered": {
-     "ci95": [
-      0.262,
-      0.69
-     ],
-     "k": 8,
      "n": 17,
-     "rate": 0.471
+     "rate": 0.529
     },
-    "filled": 8,
-    "five_min_expectancy_r": 0.896,
-    "five_min_option_trades": 2,
-    "five_min_option_usd_total": -56.0,
-    "five_min_profit_factor": 9.64,
-    "five_min_total_r": 7.17,
-    "hold_t2_expectancy_r": 1.238,
-    "hold_t2_option_trades": 2,
-    "hold_t2_option_usd_total": -118.0,
-    "hold_t2_profit_factor": 3.58,
-    "hold_t2_total_r": 9.9,
-    "median_minutes_to_t1": 28,
-    "setups": 32,
-    "stop_rate": {
-     "ci95": [
-      0.137,
-      0.694
-     ],
-     "k": 3,
-     "n": 8,
-     "rate": 0.375
-    },
-    "t2_hit_rate": {
-     "ci95": [
-      0.0,
-      0.324
-     ],
-     "k": 0,
-     "n": 8,
-     "rate": 0.0
-    },
-    "trigger_rate": {
-     "ci95": [
-      0.364,
-      0.691
-     ],
-     "k": 17,
-     "n": 32,
-     "rate": 0.531
-    },
-    "triggered": 17,
-    "win_rate_t1_before_stop": {
-     "ci95": [
-      0.306,
-      0.863
-     ],
-     "k": 5,
-     "n": 8,
-     "rate": 0.625
-    }
-   },
-   "2": {
-    "avg_mae_r": -0.54,
-    "avg_mfe_r": 2.15,
-    "bias_hit_rate": {
-     "ci95": [
-      0.185,
-      0.614
-     ],
-     "k": 6,
-     "n": 16,
-     "rate": 0.375
-    },
-    "card_expectancy_r": 1.66,
-    "card_option_trades": 6,
-    "card_option_usd_total": 86.0,
-    "card_profit_factor": 15.09,
-    "card_total_r": 14.94,
+    "card_expectancy_r": 0.907,
+    "card_option_trades": 3,
+    "card_option_usd_total": -34.0,
+    "card_profit_factor": 3.12,
+    "card_total_r": 8.16,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.332,
-      0.769
+      0.29,
+      0.71
      ],
      "k": 9,
-     "n": 16,
-     "rate": 0.562
-    },
-    "filled": 9,
-    "five_min_expectancy_r": 1.163,
-    "five_min_option_trades": 6,
-    "five_min_option_usd_total": 86.0,
-    "five_min_profit_factor": 7.84,
-    "five_min_total_r": 10.47,
-    "hold_t2_expectancy_r": 3.283,
-    "hold_t2_option_trades": 6,
-    "hold_t2_option_usd_total": 310.0,
-    "hold_t2_profit_factor": 14.13,
-    "hold_t2_total_r": 29.55,
-    "median_minutes_to_t1": 16.0,
-    "setups": 32,
-    "stop_rate": {
-     "ci95": [
-      0.02,
-      0.435
-     ],
-     "k": 1,
-     "n": 9,
-     "rate": 0.111
-    },
-    "t2_hit_rate": {
-     "ci95": [
-      0.063,
-      0.547
-     ],
-     "k": 2,
-     "n": 9,
-     "rate": 0.222
-    },
-    "trigger_rate": {
-     "ci95": [
-      0.336,
-      0.664
-     ],
-     "k": 16,
-     "n": 32,
+     "n": 18,
      "rate": 0.5
     },
-    "triggered": 16,
-    "win_rate_t1_before_stop": {
-     "ci95": [
-      0.565,
-      0.98
-     ],
-     "k": 8,
-     "n": 9,
-     "rate": 0.889
-    }
-   },
-   "3": {
-    "avg_mae_r": -1.36,
-    "avg_mfe_r": 1.2,
-    "bias_hit_rate": {
-     "ci95": [
-      0.037,
-      0.379
-     ],
-     "k": 2,
-     "n": 15,
-     "rate": 0.133
-    },
-    "card_expectancy_r": -0.89,
-    "card_option_trades": 5,
-    "card_option_usd_total": -372.0,
-    "card_profit_factor": 0.21,
-    "card_total_r": -8.01,
-    "fill_rate_of_triggered": {
-     "ci95": [
-      0.332,
-      0.769
-     ],
-     "k": 9,
-     "n": 16,
-     "rate": 0.562
-    },
     "filled": 9,
-    "five_min_expectancy_r": -0.196,
-    "five_min_option_trades": 5,
-    "five_min_option_usd_total": -372.0,
-    "five_min_profit_factor": 0.55,
-    "five_min_total_r": -1.76,
-    "hold_t2_expectancy_r": -1.251,
-    "hold_t2_option_trades": 5,
-    "hold_t2_option_usd_total": -372.0,
-    "hold_t2_profit_factor": 0.01,
-    "hold_t2_total_r": -11.26,
-    "median_minutes_to_t1": 8,
-    "setups": 32,
+    "five_min_expectancy_r": 1.019,
+    "five_min_option_trades": 3,
+    "five_min_option_usd_total": 28.0,
+    "five_min_profit_factor": 12.05,
+    "five_min_total_r": 9.17,
+    "hold_t2_expectancy_r": 1.256,
+    "hold_t2_option_trades": 3,
+    "hold_t2_option_usd_total": -67.0,
+    "hold_t2_profit_factor": 3.94,
+    "hold_t2_total_r": 11.3,
+    "median_minutes_to_t1": 26.0,
+    "setups": 34,
     "stop_rate": {
      "ci95": [
-      0.453,
-      0.937
+      0.121,
+      0.646
      ],
-     "k": 7,
+     "k": 3,
      "n": 9,
-     "rate": 0.778
+     "rate": 0.333
     },
     "t2_hit_rate": {
      "ci95": [
@@ -2853,22 +2699,176 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.336,
-      0.664
+      0.367,
+      0.685
      ],
-     "k": 16,
-     "n": 32,
-     "rate": 0.5
+     "k": 18,
+     "n": 34,
+     "rate": 0.529
     },
-    "triggered": 16,
+    "triggered": 18,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.02,
-      0.435
+      0.354,
+      0.879
+     ],
+     "k": 6,
+     "n": 9,
+     "rate": 0.667
+    }
+   },
+   "2": {
+    "avg_mae_r": -0.51,
+    "avg_mfe_r": 2.22,
+    "bias_hit_rate": {
+     "ci95": [
+      0.216,
+      0.64
+     ],
+     "k": 7,
+     "n": 17,
+     "rate": 0.412
+    },
+    "card_expectancy_r": 1.694,
+    "card_option_trades": 7,
+    "card_option_usd_total": 660.0,
+    "card_profit_factor": 16.98,
+    "card_total_r": 16.94,
+    "fill_rate_of_triggered": {
+     "ci95": [
+      0.36,
+      0.784
+     ],
+     "k": 10,
+     "n": 17,
+     "rate": 0.588
+    },
+    "filled": 10,
+    "five_min_expectancy_r": 1.247,
+    "five_min_option_trades": 7,
+    "five_min_option_usd_total": 660.0,
+    "five_min_profit_factor": 9.15,
+    "five_min_total_r": 12.47,
+    "hold_t2_expectancy_r": 2.821,
+    "hold_t2_option_trades": 7,
+    "hold_t2_option_usd_total": 6.0,
+    "hold_t2_profit_factor": 8.86,
+    "hold_t2_total_r": 28.21,
+    "median_minutes_to_t1": 10,
+    "setups": 34,
+    "stop_rate": {
+     "ci95": [
+      0.018,
+      0.404
      ],
      "k": 1,
-     "n": 9,
-     "rate": 0.111
+     "n": 10,
+     "rate": 0.1
+    },
+    "t2_hit_rate": {
+     "ci95": [
+      0.057,
+      0.51
+     ],
+     "k": 2,
+     "n": 10,
+     "rate": 0.2
+    },
+    "trigger_rate": {
+     "ci95": [
+      0.341,
+      0.659
+     ],
+     "k": 17,
+     "n": 34,
+     "rate": 0.5
+    },
+    "triggered": 17,
+    "win_rate_t1_before_stop": {
+     "ci95": [
+      0.596,
+      0.982
+     ],
+     "k": 9,
+     "n": 10,
+     "rate": 0.9
+    }
+   },
+   "3": {
+    "avg_mae_r": -1.26,
+    "avg_mfe_r": 1.31,
+    "bias_hit_rate": {
+     "ci95": [
+      0.066,
+      0.43
+     ],
+     "k": 3,
+     "n": 16,
+     "rate": 0.188
+    },
+    "card_expectancy_r": -0.601,
+    "card_option_trades": 6,
+    "card_option_usd_total": -201.0,
+    "card_profit_factor": 0.41,
+    "card_total_r": -6.01,
+    "fill_rate_of_triggered": {
+     "ci95": [
+      0.36,
+      0.784
+     ],
+     "k": 10,
+     "n": 17,
+     "rate": 0.588
+    },
+    "filled": 10,
+    "five_min_expectancy_r": 0.024,
+    "five_min_option_trades": 6,
+    "five_min_option_usd_total": -201.0,
+    "five_min_profit_factor": 1.06,
+    "five_min_total_r": 0.24,
+    "hold_t2_expectancy_r": -0.637,
+    "hold_t2_option_trades": 6,
+    "hold_t2_option_usd_total": 72.0,
+    "hold_t2_profit_factor": 0.44,
+    "hold_t2_total_r": -6.37,
+    "median_minutes_to_t1": 8.0,
+    "setups": 34,
+    "stop_rate": {
+     "ci95": [
+      0.397,
+      0.892
+     ],
+     "k": 7,
+     "n": 10,
+     "rate": 0.7
+    },
+    "t2_hit_rate": {
+     "ci95": [
+      -0.0,
+      0.278
+     ],
+     "k": 0,
+     "n": 10,
+     "rate": 0.0
+    },
+    "trigger_rate": {
+     "ci95": [
+      0.341,
+      0.659
+     ],
+     "k": 17,
+     "n": 34,
+     "rate": 0.5
+    },
+    "triggered": 17,
+    "win_rate_t1_before_stop": {
+     "ci95": [
+      0.057,
+      0.51
+     ],
+     "k": 2,
+     "n": 10,
+     "rate": 0.2
     }
    },
    "4": {
@@ -2876,12 +2876,12 @@
     "avg_mfe_r": 1.79,
     "bias_hit_rate": {
      "ci95": [
-      0.386,
-      0.815
+      0.36,
+      0.784
      ],
      "k": 10,
-     "n": 16,
-     "rate": 0.625
+     "n": 17,
+     "rate": 0.588
     },
     "card_expectancy_r": 1.159,
     "card_option_trades": 4,
@@ -2890,12 +2890,12 @@
     "card_total_r": 9.27,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.301,
-      0.752
+      0.28,
+      0.72
      ],
      "k": 8,
-     "n": 15,
-     "rate": 0.533
+     "n": 16,
+     "rate": 0.5
     },
     "filled": 8,
     "five_min_expectancy_r": 0.806,
@@ -2909,7 +2909,7 @@
     "hold_t2_profit_factor": 2.42,
     "hold_t2_total_r": 9.04,
     "median_minutes_to_t1": 5.0,
-    "setups": 32,
+    "setups": 34,
     "stop_rate": {
      "ci95": [
       0.071,
@@ -2930,14 +2930,14 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.309,
-      0.636
+      0.315,
+      0.633
      ],
-     "k": 15,
-     "n": 32,
-     "rate": 0.469
+     "k": 16,
+     "n": 34,
+     "rate": 0.471
     },
-    "triggered": 15,
+    "triggered": 16,
     "win_rate_t1_before_stop": {
      "ci95": [
       0.409,
@@ -2951,157 +2951,157 @@
   },
   "side": {
    "call": {
-    "avg_mae_r": -1.08,
-    "avg_mfe_r": 1.62,
+    "avg_mae_r": -1.02,
+    "avg_mfe_r": 1.71,
     "bias_hit_rate": {
      "ci95": [
-      0.314,
-      0.551
+      0.321,
+      0.552
      ],
-     "k": 27,
-     "n": 63,
-     "rate": 0.429
+     "k": 29,
+     "n": 67,
+     "rate": 0.433
     },
-    "card_expectancy_r": 0.53,
-    "card_option_trades": 11,
-    "card_option_usd_total": -384.0,
-    "card_profit_factor": 1.86,
-    "card_total_r": 11.13,
+    "card_expectancy_r": 0.658,
+    "card_option_trades": 13,
+    "card_option_usd_total": 361.0,
+    "card_profit_factor": 2.18,
+    "card_total_r": 15.13,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.45,
-      0.761
+      0.476,
+      0.775
      ],
-     "k": 21,
-     "n": 34,
-     "rate": 0.618
+     "k": 23,
+     "n": 36,
+     "rate": 0.639
     },
-    "filled": 21,
-    "five_min_expectancy_r": 0.607,
-    "five_min_option_trades": 11,
-    "five_min_option_usd_total": -368.0,
-    "five_min_profit_factor": 3.43,
-    "five_min_total_r": 12.75,
-    "hold_t2_expectancy_r": 0.703,
-    "hold_t2_option_trades": 11,
-    "hold_t2_option_usd_total": -690.0,
-    "hold_t2_profit_factor": 1.97,
-    "hold_t2_total_r": 14.76,
-    "median_minutes_to_t1": 16.0,
-    "setups": 64,
+    "filled": 23,
+    "five_min_expectancy_r": 0.728,
+    "five_min_option_trades": 13,
+    "five_min_option_usd_total": 377.0,
+    "five_min_profit_factor": 4.19,
+    "five_min_total_r": 16.75,
+    "hold_t2_expectancy_r": 0.796,
+    "hold_t2_option_trades": 13,
+    "hold_t2_option_usd_total": -550.0,
+    "hold_t2_profit_factor": 2.11,
+    "hold_t2_total_r": 18.31,
+    "median_minutes_to_t1": 9.0,
+    "setups": 68,
     "stop_rate": {
      "ci95": [
-      0.245,
-      0.635
+      0.222,
+      0.592
      ],
      "k": 9,
-     "n": 21,
-     "rate": 0.429
+     "n": 23,
+     "rate": 0.391
     },
     "t2_hit_rate": {
      "ci95": [
       0.008,
-      0.227
+      0.21
      ],
      "k": 1,
-     "n": 21,
-     "rate": 0.048
+     "n": 23,
+     "rate": 0.043
     },
     "trigger_rate": {
      "ci95": [
-      0.411,
-      0.648
+      0.412,
+      0.643
      ],
-     "k": 34,
-     "n": 64,
-     "rate": 0.531
+     "k": 36,
+     "n": 68,
+     "rate": 0.529
     },
-    "triggered": 34,
+    "triggered": 36,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.365,
-      0.755
+      0.408,
+      0.778
      ],
-     "k": 12,
-     "n": 21,
-     "rate": 0.571
+     "k": 14,
+     "n": 23,
+     "rate": 0.609
     }
    },
    "put": {
-    "avg_mae_r": -0.79,
-    "avg_mfe_r": 1.77,
+    "avg_mae_r": -0.73,
+    "avg_mfe_r": 1.79,
     "bias_hit_rate": {
      "ci95": [
-      0.314,
-      0.551
+      0.321,
+      0.552
      ],
-     "k": 27,
-     "n": 63,
-     "rate": 0.429
-    },
-    "card_expectancy_r": 0.864,
-    "card_option_trades": 6,
-    "card_option_usd_total": 132.0,
-    "card_profit_factor": 3.28,
-    "card_total_r": 11.23,
-    "fill_rate_of_triggered": {
-     "ci95": [
-      0.274,
-      0.608
-     ],
-     "k": 13,
-     "n": 30,
+     "k": 29,
+     "n": 67,
      "rate": 0.433
     },
-    "filled": 13,
-    "five_min_expectancy_r": 0.737,
-    "five_min_option_trades": 6,
-    "five_min_option_usd_total": 132.0,
-    "five_min_profit_factor": 4.71,
-    "five_min_total_r": 9.58,
-    "hold_t2_expectancy_r": 1.728,
-    "hold_t2_option_trades": 6,
-    "hold_t2_option_usd_total": 1263.0,
-    "hold_t2_profit_factor": 3.57,
-    "hold_t2_total_r": 22.47,
-    "median_minutes_to_t1": 9.0,
-    "setups": 64,
+    "card_expectancy_r": 0.945,
+    "card_option_trades": 7,
+    "card_option_usd_total": 216.0,
+    "card_profit_factor": 3.68,
+    "card_total_r": 13.23,
+    "fill_rate_of_triggered": {
+     "ci95": [
+      0.282,
+      0.607
+     ],
+     "k": 14,
+     "n": 32,
+     "rate": 0.438
+    },
+    "filled": 14,
+    "five_min_expectancy_r": 0.827,
+    "five_min_option_trades": 7,
+    "five_min_option_usd_total": 216.0,
+    "five_min_profit_factor": 5.49,
+    "five_min_total_r": 11.58,
+    "hold_t2_expectancy_r": 1.705,
+    "hold_t2_option_trades": 7,
+    "hold_t2_option_usd_total": 1314.0,
+    "hold_t2_profit_factor": 3.73,
+    "hold_t2_total_r": 23.87,
+    "median_minutes_to_t1": 10,
+    "setups": 68,
     "stop_rate": {
      "ci95": [
-      0.127,
-      0.576
+      0.117,
+      0.546
      ],
      "k": 4,
-     "n": 13,
-     "rate": 0.308
+     "n": 14,
+     "rate": 0.286
     },
     "t2_hit_rate": {
      "ci95": [
-      0.043,
-      0.422
+      0.04,
+      0.399
      ],
      "k": 2,
-     "n": 13,
-     "rate": 0.154
+     "n": 14,
+     "rate": 0.143
     },
     "trigger_rate": {
      "ci95": [
-      0.352,
-      0.589
+      0.357,
+      0.588
      ],
-     "k": 30,
-     "n": 64,
-     "rate": 0.469
+     "k": 32,
+     "n": 68,
+     "rate": 0.471
     },
-    "triggered": 30,
+    "triggered": 32,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.355,
-      0.823
+      0.388,
+      0.837
      ],
-     "k": 8,
-     "n": 13,
-     "rate": 0.615
+     "k": 9,
+     "n": 14,
+     "rate": 0.643
     }
    }
   },
@@ -3184,80 +3184,80 @@
     }
    },
    "AMD": {
-    "avg_mae_r": -1.31,
-    "avg_mfe_r": 1.9,
+    "avg_mae_r": -0.97,
+    "avg_mfe_r": 2.22,
     "bias_hit_rate": {
      "ci95": [
-      0.15,
-      0.85
+      0.231,
+      0.882
      ],
-     "k": 2,
-     "n": 4,
-     "rate": 0.5
+     "k": 3,
+     "n": 5,
+     "rate": 0.6
     },
-    "card_expectancy_r": 0.215,
-    "card_option_trades": 2,
-    "card_option_usd_total": -198.0,
-    "card_profit_factor": 1.27,
-    "card_total_r": 0.43,
+    "card_expectancy_r": 0.81,
+    "card_option_trades": 3,
+    "card_option_usd_total": 376.0,
+    "card_profit_factor": 2.55,
+    "card_total_r": 2.43,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.15,
-      0.85
+      0.231,
+      0.882
      ],
-     "k": 2,
-     "n": 4,
-     "rate": 0.5
+     "k": 3,
+     "n": 5,
+     "rate": 0.6
     },
-    "filled": 2,
-    "five_min_expectancy_r": -0.4,
-    "five_min_option_trades": 2,
-    "five_min_option_usd_total": -198.0,
-    "five_min_profit_factor": 0.0,
-    "five_min_total_r": -0.8,
-    "hold_t2_expectancy_r": 1.41,
-    "hold_t2_option_trades": 2,
-    "hold_t2_option_usd_total": -198.0,
-    "hold_t2_profit_factor": 2.8,
-    "hold_t2_total_r": 2.82,
-    "median_minutes_to_t1": 188,
-    "setups": 8,
+    "filled": 3,
+    "five_min_expectancy_r": 0.4,
+    "five_min_option_trades": 3,
+    "five_min_option_usd_total": 376.0,
+    "five_min_profit_factor": 2.5,
+    "five_min_total_r": 1.2,
+    "hold_t2_expectancy_r": 0.493,
+    "hold_t2_option_trades": 3,
+    "hold_t2_option_usd_total": -502.0,
+    "hold_t2_profit_factor": 1.51,
+    "hold_t2_total_r": 1.48,
+    "median_minutes_to_t1": 97.0,
+    "setups": 10,
     "stop_rate": {
      "ci95": [
-      0.095,
-      0.905
+      0.061,
+      0.792
      ],
      "k": 1,
-     "n": 2,
-     "rate": 0.5
+     "n": 3,
+     "rate": 0.333
     },
     "t2_hit_rate": {
      "ci95": [
       0.0,
-      0.658
+      0.562
      ],
      "k": 0,
-     "n": 2,
+     "n": 3,
      "rate": 0.0
     },
     "trigger_rate": {
      "ci95": [
-      0.215,
-      0.785
+      0.237,
+      0.763
      ],
-     "k": 4,
-     "n": 8,
+     "k": 5,
+     "n": 10,
      "rate": 0.5
     },
-    "triggered": 4,
+    "triggered": 5,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.095,
-      0.905
+      0.208,
+      0.939
      ],
-     "k": 1,
-     "n": 2,
-     "rate": 0.5
+     "k": 2,
+     "n": 3,
+     "rate": 0.667
     }
    },
    "AMZN": {
@@ -3338,79 +3338,79 @@
     }
    },
    "AVGO": {
-    "avg_mae_r": -0.72,
+    "avg_mae_r": -0.63,
     "avg_mfe_r": 2.33,
     "bias_hit_rate": {
      "ci95": [
-      0.342,
+      0.438,
       1.0
      ],
-     "k": 2,
-     "n": 2,
+     "k": 3,
+     "n": 3,
      "rate": 1.0
     },
     "card_expectancy_r": 2.0,
-    "card_option_trades": 2,
-    "card_option_usd_total": -131.0,
+    "card_option_trades": 3,
+    "card_option_usd_total": 40.0,
     "card_profit_factor": null,
-    "card_total_r": 4.0,
+    "card_total_r": 6.0,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.342,
+      0.438,
       1.0
      ],
-     "k": 2,
-     "n": 2,
+     "k": 3,
+     "n": 3,
      "rate": 1.0
     },
-    "filled": 2,
+    "filled": 3,
     "five_min_expectancy_r": 2.0,
-    "five_min_option_trades": 2,
-    "five_min_option_usd_total": -131.0,
+    "five_min_option_trades": 3,
+    "five_min_option_usd_total": 40.0,
     "five_min_profit_factor": null,
-    "five_min_total_r": 4.0,
-    "hold_t2_expectancy_r": 4.74,
-    "hold_t2_option_trades": 2,
-    "hold_t2_option_usd_total": -131.0,
+    "five_min_total_r": 6.0,
+    "hold_t2_expectancy_r": 4.79,
+    "hold_t2_option_trades": 3,
+    "hold_t2_option_usd_total": 313.0,
     "hold_t2_profit_factor": null,
-    "hold_t2_total_r": 9.48,
-    "median_minutes_to_t1": 103.0,
-    "setups": 4,
+    "hold_t2_total_r": 14.37,
+    "median_minutes_to_t1": 22,
+    "setups": 6,
     "stop_rate": {
      "ci95": [
       0.0,
-      0.658
+      0.562
      ],
      "k": 0,
-     "n": 2,
+     "n": 3,
      "rate": 0.0
     },
     "t2_hit_rate": {
      "ci95": [
-      0.095,
-      0.905
+      0.061,
+      0.792
      ],
      "k": 1,
-     "n": 2,
-     "rate": 0.5
+     "n": 3,
+     "rate": 0.333
     },
     "trigger_rate": {
      "ci95": [
-      0.15,
-      0.85
+      0.188,
+      0.812
      ],
-     "k": 2,
-     "n": 4,
+     "k": 3,
+     "n": 6,
      "rate": 0.5
     },
-    "triggered": 2,
+    "triggered": 3,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.342,
+      0.438,
       1.0
      ],
-     "k": 2,
-     "n": 2,
+     "k": 3,
+     "n": 3,
      "rate": 1.0
     }
    },
@@ -3569,9 +3569,45 @@
     }
    },
    "NVDA": {
-    "avg_mae_r": -0.68,
-    "avg_mfe_r": 1.39,
+    "avg_mae_r": -0.57,
+    "avg_mfe_r": 1.49,
     "bias_hit_rate": {
+     "ci95": [
+      0.082,
+      0.641
+     ],
+     "k": 2,
+     "n": 7,
+     "rate": 0.286
+    },
+    "card_expectancy_r": 0.65,
+    "card_option_trades": 4,
+    "card_option_usd_total": 74.0,
+    "card_profit_factor": 2.73,
+    "card_total_r": 3.9,
+    "fill_rate_of_triggered": {
+     "ci95": [
+      0.354,
+      0.879
+     ],
+     "k": 6,
+     "n": 9,
+     "rate": 0.667
+    },
+    "filled": 6,
+    "five_min_expectancy_r": 0.912,
+    "five_min_option_trades": 4,
+    "five_min_option_usd_total": 74.0,
+    "five_min_profit_factor": 8.93,
+    "five_min_total_r": 5.47,
+    "hold_t2_expectancy_r": 0.58,
+    "hold_t2_option_trades": 4,
+    "hold_t2_option_usd_total": 3.0,
+    "hold_t2_profit_factor": 2.54,
+    "hold_t2_total_r": 3.48,
+    "median_minutes_to_t1": 24,
+    "setups": 14,
+    "stop_rate": {
      "ci95": [
       0.097,
       0.7
@@ -3580,69 +3616,33 @@
      "n": 6,
      "rate": 0.333
     },
-    "card_expectancy_r": 0.38,
-    "card_option_trades": 3,
-    "card_option_usd_total": -10.0,
-    "card_profit_factor": 1.84,
-    "card_total_r": 1.9,
-    "fill_rate_of_triggered": {
-     "ci95": [
-      0.306,
-      0.863
-     ],
-     "k": 5,
-     "n": 8,
-     "rate": 0.625
-    },
-    "filled": 5,
-    "five_min_expectancy_r": 0.694,
-    "five_min_option_trades": 3,
-    "five_min_option_usd_total": -10.0,
-    "five_min_profit_factor": 6.03,
-    "five_min_total_r": 3.47,
-    "hold_t2_expectancy_r": 0.416,
-    "hold_t2_option_trades": 3,
-    "hold_t2_option_usd_total": -48.0,
-    "hold_t2_profit_factor": 1.92,
-    "hold_t2_total_r": 2.08,
-    "median_minutes_to_t1": 67.0,
-    "setups": 12,
-    "stop_rate": {
-     "ci95": [
-      0.118,
-      0.769
-     ],
-     "k": 2,
-     "n": 5,
-     "rate": 0.4
-    },
     "t2_hit_rate": {
      "ci95": [
-      -0.0,
-      0.434
+      0.0,
+      0.39
      ],
      "k": 0,
-     "n": 5,
+     "n": 6,
      "rate": 0.0
     },
     "trigger_rate": {
      "ci95": [
-      0.391,
-      0.862
+      0.388,
+      0.837
      ],
-     "k": 8,
-     "n": 12,
-     "rate": 0.667
+     "k": 9,
+     "n": 14,
+     "rate": 0.643
     },
-    "triggered": 8,
+    "triggered": 9,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.118,
-      0.769
+      0.188,
+      0.812
      ],
-     "k": 2,
-     "n": 5,
-     "rate": 0.4
+     "k": 3,
+     "n": 6,
+     "rate": 0.5
     }
    },
    "PLTR": {
@@ -3727,12 +3727,12 @@
     "avg_mfe_r": 1.79,
     "bias_hit_rate": {
      "ci95": [
-      0.386,
-      0.815
+      0.36,
+      0.784
      ],
      "k": 10,
-     "n": 16,
-     "rate": 0.625
+     "n": 17,
+     "rate": 0.588
     },
     "card_expectancy_r": 1.159,
     "card_option_trades": 4,
@@ -3741,12 +3741,12 @@
     "card_total_r": 9.27,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.301,
-      0.752
+      0.28,
+      0.72
      ],
      "k": 8,
-     "n": 15,
-     "rate": 0.533
+     "n": 16,
+     "rate": 0.5
     },
     "filled": 8,
     "five_min_expectancy_r": 0.806,
@@ -3760,7 +3760,7 @@
     "hold_t2_profit_factor": 2.42,
     "hold_t2_total_r": 9.04,
     "median_minutes_to_t1": 5.0,
-    "setups": 32,
+    "setups": 34,
     "stop_rate": {
      "ci95": [
       0.071,
@@ -3781,14 +3781,14 @@
     },
     "trigger_rate": {
      "ci95": [
-      0.309,
-      0.636
+      0.315,
+      0.633
      ],
-     "k": 15,
-     "n": 32,
-     "rate": 0.469
+     "k": 16,
+     "n": 34,
+     "rate": 0.471
     },
-    "triggered": 15,
+    "triggered": 16,
     "win_rate_t1_before_stop": {
      "ci95": [
       0.409,
@@ -4110,80 +4110,80 @@
     }
    },
    "Tue": {
-    "avg_mae_r": -1.03,
-    "avg_mfe_r": 1.39,
+    "avg_mae_r": -0.7,
+    "avg_mfe_r": 1.82,
     "bias_hit_rate": {
      "ci95": [
-      0.213,
-      0.72
+      0.248,
+      0.699
      ],
-     "k": 5,
-     "n": 11,
-     "rate": 0.455
+     "k": 7,
+     "n": 15,
+     "rate": 0.467
     },
-    "card_expectancy_r": 0.238,
-    "card_option_trades": 0,
-    "card_option_usd_total": null,
-    "card_profit_factor": 1.31,
-    "card_total_r": 0.95,
+    "card_expectancy_r": 0.993,
+    "card_option_trades": 3,
+    "card_option_usd_total": 829.0,
+    "card_profit_factor": 3.28,
+    "card_total_r": 6.95,
     "fill_rate_of_triggered": {
      "ci95": [
-      0.152,
-      0.646
+      0.248,
+      0.699
      ],
-     "k": 4,
-     "n": 11,
-     "rate": 0.364
+     "k": 7,
+     "n": 15,
+     "rate": 0.467
     },
-    "filled": 4,
-    "five_min_expectancy_r": 0.352,
-    "five_min_option_trades": 0,
-    "five_min_option_usd_total": null,
-    "five_min_profit_factor": 3.39,
-    "five_min_total_r": 1.41,
-    "hold_t2_expectancy_r": 0.083,
-    "hold_t2_option_trades": 0,
-    "hold_t2_option_usd_total": null,
-    "hold_t2_profit_factor": 1.11,
-    "hold_t2_total_r": 0.33,
-    "median_minutes_to_t1": 108.0,
-    "setups": 24,
+    "filled": 7,
+    "five_min_expectancy_r": 1.059,
+    "five_min_option_trades": 3,
+    "five_min_option_usd_total": 829.0,
+    "five_min_profit_factor": 13.56,
+    "five_min_total_r": 7.41,
+    "hold_t2_expectancy_r": 0.754,
+    "hold_t2_option_trades": 3,
+    "hold_t2_option_usd_total": 191.0,
+    "hold_t2_profit_factor": 2.2,
+    "hold_t2_total_r": 5.28,
+    "median_minutes_to_t1": 8,
+    "setups": 32,
     "stop_rate": {
      "ci95": [
-      0.15,
-      0.85
+      0.082,
+      0.641
      ],
      "k": 2,
-     "n": 4,
-     "rate": 0.5
+     "n": 7,
+     "rate": 0.286
     },
     "t2_hit_rate": {
      "ci95": [
       0.0,
-      0.49
+      0.354
      ],
      "k": 0,
-     "n": 4,
+     "n": 7,
      "rate": 0.0
     },
     "trigger_rate": {
      "ci95": [
-      0.279,
-      0.649
+      0.309,
+      0.636
      ],
-     "k": 11,
-     "n": 24,
-     "rate": 0.458
+     "k": 15,
+     "n": 32,
+     "rate": 0.469
     },
-    "triggered": 11,
+    "triggered": 15,
     "win_rate_t1_before_stop": {
      "ci95": [
-      0.15,
-      0.85
+      0.359,
+      0.918
      ],
-     "k": 2,
-     "n": 4,
-     "rate": 0.5
+     "k": 5,
+     "n": 7,
+     "rate": 0.714
     }
    },
    "Wed": {
@@ -8300,8 +8300,8 @@
   }
  },
  "calibration": {
-  "ic_card_score_vs_r": 0.002,
-  "ic_rank_vs_r": 0.104,
+  "ic_card_score_vs_r": 0.082,
+  "ic_rank_vs_r": 0.131,
   "win_rate_by_confidence": {
    "high": {
     "ci95": [
@@ -8323,12 +8323,12 @@
    },
    "medium": {
     "ci95": [
-     0.46,
-     0.846
+     0.518,
+     0.868
     ],
-    "k": 13,
-    "n": 19,
-    "rate": 0.684
+    "k": 16,
+    "n": 22,
+    "rate": 0.727
    }
   }
  },
@@ -8366,322 +8366,322 @@
   }
  },
  "live_only": {
-  "avg_mae_r": -0.68,
-  "avg_mfe_r": 1.84,
+  "avg_mae_r": -0.58,
+  "avg_mfe_r": 1.97,
   "bias_hit_rate": {
    "ci95": [
-    0.215,
-    0.558
+    0.237,
+    0.562
    ],
-   "k": 10,
-   "n": 27,
-   "rate": 0.37
+   "k": 12,
+   "n": 31,
+   "rate": 0.387
   },
-  "card_expectancy_r": 0.989,
-  "card_option_trades": 9,
-  "card_option_usd_total": -132.0,
-  "card_profit_factor": 3.41,
-  "card_total_r": 9.89,
+  "card_expectancy_r": 1.222,
+  "card_option_trades": 12,
+  "card_option_usd_total": 697.0,
+  "card_profit_factor": 4.87,
+  "card_total_r": 15.89,
   "fill_rate_of_triggered": {
    "ci95": [
-    0.245,
-    0.612
+    0.295,
+    0.642
    ],
-   "k": 10,
-   "n": 24,
-   "rate": 0.417
+   "k": 13,
+   "n": 28,
+   "rate": 0.464
   },
-  "filled": 10,
-  "five_min_expectancy_r": 1.066,
-  "five_min_option_trades": 9,
-  "five_min_option_usd_total": -70.0,
-  "five_min_profit_factor": 8.96,
-  "five_min_total_r": 10.66,
-  "hold_t2_expectancy_r": 1.986,
-  "hold_t2_option_trades": 9,
-  "hold_t2_option_usd_total": 863.0,
-  "hold_t2_profit_factor": 4.07,
-  "hold_t2_total_r": 19.86,
-  "median_minutes_to_t1": 6,
-  "setups": 56,
+  "filled": 13,
+  "five_min_expectancy_r": 1.282,
+  "five_min_option_trades": 12,
+  "five_min_option_usd_total": 759.0,
+  "five_min_profit_factor": 13.43,
+  "five_min_total_r": 16.66,
+  "hold_t2_expectancy_r": 1.908,
+  "hold_t2_option_trades": 12,
+  "hold_t2_option_usd_total": 1054.0,
+  "hold_t2_profit_factor": 4.18,
+  "hold_t2_total_r": 24.81,
+  "median_minutes_to_t1": 7.0,
+  "setups": 64,
   "stop_rate": {
    "ci95": [
-    0.108,
-    0.603
+    0.082,
+    0.503
    ],
    "k": 3,
-   "n": 10,
-   "rate": 0.3
+   "n": 13,
+   "rate": 0.231
   },
   "t2_hit_rate": {
    "ci95": [
-    0.108,
-    0.603
+    0.082,
+    0.503
    ],
    "k": 3,
-   "n": 10,
-   "rate": 0.3
+   "n": 13,
+   "rate": 0.231
   },
   "trigger_rate": {
    "ci95": [
-    0.308,
+    0.323,
     0.559
    ],
-   "k": 24,
-   "n": 56,
-   "rate": 0.429
+   "k": 28,
+   "n": 64,
+   "rate": 0.438
   },
-  "triggered": 24,
+  "triggered": 28,
   "win_rate_t1_before_stop": {
    "ci95": [
-    0.397,
-    0.892
+    0.497,
+    0.918
    ],
-   "k": 7,
-   "n": 10,
-   "rate": 0.7
+   "k": 10,
+   "n": 13,
+   "rate": 0.769
   }
  },
  "published": {
-  "avg_mae_r": -0.97,
-  "avg_mfe_r": 1.68,
+  "avg_mae_r": -0.91,
+  "avg_mfe_r": 1.74,
   "bias_hit_rate": {
    "ci95": [
-    0.314,
-    0.551
+    0.321,
+    0.552
    ],
-   "k": 27,
-   "n": 63,
-   "rate": 0.429
+   "k": 29,
+   "n": 67,
+   "rate": 0.433
   },
-  "card_expectancy_r": 0.658,
-  "card_option_trades": 17,
-  "card_option_usd_total": -252.0,
-  "card_profit_factor": 2.26,
-  "card_total_r": 22.36,
+  "card_expectancy_r": 0.766,
+  "card_option_trades": 20,
+  "card_option_usd_total": 577.0,
+  "card_profit_factor": 2.59,
+  "card_total_r": 28.36,
   "fill_rate_of_triggered": {
    "ci95": [
-    0.411,
-    0.648
+    0.427,
+    0.657
    ],
-   "k": 34,
-   "n": 64,
-   "rate": 0.531
+   "k": 37,
+   "n": 68,
+   "rate": 0.544
   },
-  "filled": 34,
-  "five_min_expectancy_r": 0.657,
-  "five_min_option_trades": 17,
-  "five_min_option_usd_total": -236.0,
-  "five_min_profit_factor": 3.85,
-  "five_min_total_r": 22.33,
-  "hold_t2_expectancy_r": 1.095,
-  "hold_t2_option_trades": 17,
-  "hold_t2_option_usd_total": 573.0,
-  "hold_t2_profit_factor": 2.56,
-  "hold_t2_total_r": 37.23,
-  "median_minutes_to_t1": 10.0,
-  "setups": 128,
+  "filled": 37,
+  "five_min_expectancy_r": 0.766,
+  "five_min_option_trades": 20,
+  "five_min_option_usd_total": 593.0,
+  "five_min_profit_factor": 4.62,
+  "five_min_total_r": 28.33,
+  "hold_t2_expectancy_r": 1.14,
+  "hold_t2_option_trades": 20,
+  "hold_t2_option_usd_total": 764.0,
+  "hold_t2_profit_factor": 2.67,
+  "hold_t2_total_r": 42.18,
+  "median_minutes_to_t1": 10,
+  "setups": 136,
   "stop_rate": {
    "ci95": [
-    0.239,
-    0.55
+    0.218,
+    0.512
    ],
    "k": 13,
-   "n": 34,
-   "rate": 0.382
+   "n": 37,
+   "rate": 0.351
   },
   "t2_hit_rate": {
    "ci95": [
-    0.03,
-    0.23
+    0.028,
+    0.213
    ],
    "k": 3,
-   "n": 34,
-   "rate": 0.088
+   "n": 37,
+   "rate": 0.081
   },
   "trigger_rate": {
    "ci95": [
-    0.415,
-    0.585
+    0.417,
+    0.583
    ],
-   "k": 64,
-   "n": 128,
+   "k": 68,
+   "n": 136,
    "rate": 0.5
   },
-  "triggered": 64,
+  "triggered": 68,
   "win_rate_t1_before_stop": {
    "ci95": [
-    0.422,
-    0.736
+    0.461,
+    0.759
    ],
-   "k": 20,
-   "n": 34,
-   "rate": 0.588
+   "k": 23,
+   "n": 37,
+   "rate": 0.622
   }
  },
- "published_sessions": 16,
+ "published_sessions": 17,
  "rebuilt_sessions": [
   "2026-03-04",
   "2026-10-16"
  ],
  "rolling_20": {
-  "avg_mae_r": -0.97,
-  "avg_mfe_r": 1.68,
+  "avg_mae_r": -0.91,
+  "avg_mfe_r": 1.74,
   "bias_hit_rate": {
    "ci95": [
-    0.314,
-    0.551
+    0.321,
+    0.552
    ],
-   "k": 27,
-   "n": 63,
-   "rate": 0.429
+   "k": 29,
+   "n": 67,
+   "rate": 0.433
   },
-  "card_expectancy_r": 0.658,
-  "card_option_trades": 17,
-  "card_option_usd_total": -252.0,
-  "card_profit_factor": 2.26,
-  "card_total_r": 22.36,
+  "card_expectancy_r": 0.766,
+  "card_option_trades": 20,
+  "card_option_usd_total": 577.0,
+  "card_profit_factor": 2.59,
+  "card_total_r": 28.36,
   "fill_rate_of_triggered": {
    "ci95": [
-    0.411,
-    0.648
+    0.427,
+    0.657
    ],
-   "k": 34,
-   "n": 64,
-   "rate": 0.531
+   "k": 37,
+   "n": 68,
+   "rate": 0.544
   },
-  "filled": 34,
-  "five_min_expectancy_r": 0.657,
-  "five_min_option_trades": 17,
-  "five_min_option_usd_total": -236.0,
-  "five_min_profit_factor": 3.85,
-  "five_min_total_r": 22.33,
-  "hold_t2_expectancy_r": 1.095,
-  "hold_t2_option_trades": 17,
-  "hold_t2_option_usd_total": 573.0,
-  "hold_t2_profit_factor": 2.56,
-  "hold_t2_total_r": 37.23,
-  "median_minutes_to_t1": 10.0,
-  "setups": 128,
+  "filled": 37,
+  "five_min_expectancy_r": 0.766,
+  "five_min_option_trades": 20,
+  "five_min_option_usd_total": 593.0,
+  "five_min_profit_factor": 4.62,
+  "five_min_total_r": 28.33,
+  "hold_t2_expectancy_r": 1.14,
+  "hold_t2_option_trades": 20,
+  "hold_t2_option_usd_total": 764.0,
+  "hold_t2_profit_factor": 2.67,
+  "hold_t2_total_r": 42.18,
+  "median_minutes_to_t1": 10,
+  "setups": 136,
   "stop_rate": {
    "ci95": [
-    0.239,
-    0.55
+    0.218,
+    0.512
    ],
    "k": 13,
-   "n": 34,
-   "rate": 0.382
+   "n": 37,
+   "rate": 0.351
   },
   "t2_hit_rate": {
    "ci95": [
-    0.03,
-    0.23
+    0.028,
+    0.213
    ],
    "k": 3,
-   "n": 34,
-   "rate": 0.088
+   "n": 37,
+   "rate": 0.081
   },
   "trigger_rate": {
    "ci95": [
-    0.415,
-    0.585
+    0.417,
+    0.583
    ],
-   "k": 64,
-   "n": 128,
+   "k": 68,
+   "n": 136,
    "rate": 0.5
   },
-  "triggered": 64,
+  "triggered": 68,
   "win_rate_t1_before_stop": {
    "ci95": [
-    0.422,
-    0.736
+    0.461,
+    0.759
    ],
-   "k": 20,
-   "n": 34,
-   "rate": 0.588
+   "k": 23,
+   "n": 37,
+   "rate": 0.622
   }
  },
- "sessions": 174,
+ "sessions": 175,
  "tiers": {
   "published": {
-   "avg_mae_r": -0.97,
-   "avg_mfe_r": 1.68,
+   "avg_mae_r": -0.91,
+   "avg_mfe_r": 1.74,
    "bias_hit_rate": {
     "ci95": [
-     0.314,
-     0.551
+     0.321,
+     0.552
     ],
-    "k": 27,
-    "n": 63,
-    "rate": 0.429
+    "k": 29,
+    "n": 67,
+    "rate": 0.433
    },
-   "card_expectancy_r": 0.658,
-   "card_option_trades": 17,
-   "card_option_usd_total": -252.0,
-   "card_profit_factor": 2.26,
-   "card_total_r": 22.36,
+   "card_expectancy_r": 0.766,
+   "card_option_trades": 20,
+   "card_option_usd_total": 577.0,
+   "card_profit_factor": 2.59,
+   "card_total_r": 28.36,
    "fill_rate_of_triggered": {
     "ci95": [
-     0.411,
-     0.648
+     0.427,
+     0.657
     ],
-    "k": 34,
-    "n": 64,
-    "rate": 0.531
+    "k": 37,
+    "n": 68,
+    "rate": 0.544
    },
-   "filled": 34,
-   "five_min_expectancy_r": 0.657,
-   "five_min_option_trades": 17,
-   "five_min_option_usd_total": -236.0,
-   "five_min_profit_factor": 3.85,
-   "five_min_total_r": 22.33,
-   "hold_t2_expectancy_r": 1.095,
-   "hold_t2_option_trades": 17,
-   "hold_t2_option_usd_total": 573.0,
-   "hold_t2_profit_factor": 2.56,
-   "hold_t2_total_r": 37.23,
-   "median_minutes_to_t1": 10.0,
+   "filled": 37,
+   "five_min_expectancy_r": 0.766,
+   "five_min_option_trades": 20,
+   "five_min_option_usd_total": 593.0,
+   "five_min_profit_factor": 4.62,
+   "five_min_total_r": 28.33,
+   "hold_t2_expectancy_r": 1.14,
+   "hold_t2_option_trades": 20,
+   "hold_t2_option_usd_total": 764.0,
+   "hold_t2_profit_factor": 2.67,
+   "hold_t2_total_r": 42.18,
+   "median_minutes_to_t1": 10,
    "sessions": [
     "2026-10-19",
-    "2026-11-09"
+    "2026-11-10"
    ],
-   "setups": 128,
+   "setups": 136,
    "stop_rate": {
     "ci95": [
-     0.239,
-     0.55
+     0.218,
+     0.512
     ],
     "k": 13,
-    "n": 34,
-    "rate": 0.382
+    "n": 37,
+    "rate": 0.351
    },
    "t2_hit_rate": {
     "ci95": [
-     0.03,
-     0.23
+     0.028,
+     0.213
     ],
     "k": 3,
-    "n": 34,
-    "rate": 0.088
+    "n": 37,
+    "rate": 0.081
    },
    "trigger_rate": {
     "ci95": [
-     0.415,
-     0.585
+     0.417,
+     0.583
     ],
-    "k": 64,
-    "n": 128,
+    "k": 68,
+    "n": 136,
     "rate": 0.5
    },
-   "triggered": 64,
+   "triggered": 68,
    "win_rate_t1_before_stop": {
     "ci95": [
-     0.422,
-     0.736
+     0.461,
+     0.759
     ],
-    "k": 20,
-    "n": 34,
-    "rate": 0.588
+    "k": 23,
+    "n": 37,
+    "rate": 0.622
    }
   },
   "rebuilt_2min": {
