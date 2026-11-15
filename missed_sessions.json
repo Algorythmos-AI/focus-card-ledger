@@ -1,0 +1,11 @@
+[
+ {
+  "session": "2026-11-13",
+  "missing": [
+   "predictions",
+   "outcomes"
+  ],
+  "listed_at": "2026-11-16",
+  "reason": "No predictions were saved for this session, so there was nothing to score after the close. By the routines' run records, the options pre-open routine fired at 10:26 New York (scheduled 08:50) and the ledger's save routine at 10:31 (scheduled 09:11), both after the open; the save run recorded nothing. Not back-filled."
+ }
+]

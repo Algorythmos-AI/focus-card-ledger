@@ -7,7 +7,7 @@
   scorecard                                                       rebuild scorecard.json, data/setups.csv, README
   report    --week YYYY-Www                                       B: weekly report
   dashboard --session D [--out FILE] [--send]                     the day's edition for Sam's dashboard
-  validate  [BASE_REF]                                            CI checks
+  validate  [BASE_REF] [--gaps]                                   CI checks (--gaps: no past session missing)
 """
 from __future__ import annotations
 
@@ -158,11 +158,11 @@ def main(argv=None):
     p = sub.add_parser("options"); p.add_argument("--session", required=True); p.add_argument("--manifest", required=True)
     sub.add_parser("scorecard")
     p = sub.add_parser("report"); p.add_argument("--week", required=True)
-    p = sub.add_parser("validate"); p.add_argument("base", nargs="?")
+    p = sub.add_parser("validate"); p.add_argument("base", nargs="?"); p.add_argument("--gaps", action="store_true")
     p = sub.add_parser("dashboard"); p.add_argument("--session", required=True); p.add_argument("--out"); p.add_argument("--send", action="store_true")
     a = ap.parse_args(argv)
     if a.cmd == "validate":
-        return validate.main([a.base] if a.base else [])
+        return validate.main(([a.base] if a.base else []) + (["--gaps"] if a.gaps else []))
     return {"predict": cmd_predict, "bars": cmd_bars, "score": cmd_score, "options": cmd_options,
             "scorecard": cmd_scorecard, "report": cmd_report, "dashboard": cmd_dashboard}[a.cmd](a)
 
