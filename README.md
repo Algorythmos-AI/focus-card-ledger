@@ -156,9 +156,19 @@ bars/YYYY/DATE/SYMBOL.json      the bars each outcome was scored on
 scorecard.json, data/setups.csv derived; rebuilt by `python -m ledger scorecard`
 reports/daily, reports/weekly   readable pages
 schema/                         required fields per record type
+missed_sessions.json            NYSE sessions with no prediction or no outcome, each with the reason
 tools/                          rebuild_cards.py (past cards), tier_check.py (coarse-bar error bar)
 docs/backfill.md                how the rebuilt history was made and how far to trust it
 ```
+
+## Missed sessions
+
+Every NYSE session since the first one in the ledger must have predictions once 09:30 New York has passed and
+outcomes once 17:00 New York has passed. `python -m ledger validate --gaps` fails for any session missing either
+that is not listed in `missed_sessions.json` with the reason. The list is append-only, like `predictions/`. CI runs
+the check on every push and on weekdays at 22:45 UTC (GitHub may run scheduled checks late), so a day with no push
+still fails a check. The calendar is `ledger/sessions.py`. A missed session is listed, never back-filled silently;
+if it is back-filled later, its predictions carry `backfilled: true`.
 
 ## Commands
 
@@ -170,5 +180,6 @@ python -m ledger options --session 2026-10-29 --manifest options_manifest.json
 python -m ledger scorecard
 python -m ledger report --week 2026-W44
 python -m ledger validate origin/main
+python -m ledger validate --gaps
 python -m unittest discover tests
 ```

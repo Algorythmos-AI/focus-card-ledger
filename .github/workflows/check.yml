@@ -3,6 +3,11 @@ name: check
 on:
   push:
   pull_request:
+  # Every weekday after the after-close run, so a day with no push at all is still checked:
+  # 22:45 UTC is 17:45 New York in winter and 18:45 in summer, after outcomes are due (17:00).
+  schedule:
+    - cron: "45 22 * * 1-5"
+  workflow_dispatch:
 
 jobs:
   ledger:
@@ -16,11 +21,11 @@ jobs:
           python-version: "3.12"
       - name: Unit tests
         run: python -m unittest discover tests -v
-      - name: Ledger is consistent and predictions are append-only
+      - name: Ledger is consistent, predictions are append-only, no session is missing
         run: |
           base="${{ github.event.pull_request.base.sha || github.event.before }}"
           if [ -z "$base" ] || [ "$base" = "0000000000000000000000000000000000000000" ]; then base=""; fi
-          python -m ledger validate $base
+          python -m ledger validate --gaps $base
       - name: Derived files are up to date
         run: |
           python -m ledger scorecard
