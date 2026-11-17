@@ -1,0 +1,4 @@
+{"2026-11-17-NVDA-put": {"expiry": "20261118", "chain": {"152.5": {"name": "NVDA_152.5P", "description": "NVDA NOV 18 '26 152.5 Put"}}},
+ "2026-11-17-TSLA-put": {"expiry": "20261118", "chain": {"375": {"name": "TSLA_375P", "description": "TSLA NOV 18 '26 375 Put"}}},
+ "2026-11-17-AVGO-call": {"expiry": "20261118", "chain": {"340": {"name": "AVGO_340C", "description": "AVGO NOV 18 '26 340 Call"}}},
+ "2026-11-17-SPY-put": {"expiry": "20261117", "chain": {"737": {"name": "SPY_737P", "description": "SPY NOV 17 '26 737 Put"}}}}
