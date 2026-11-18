@@ -18,15 +18,15 @@ R is measured on the stock, from entry to stop, before option costs. Each rate s
 The headline tables use only cards that were really published (from 19 Oct). The rebuilt history (4 Mar – 16 Oct; 2-minute bars from 4 May) sits in its own tables, split by bar size; how it was rebuilt and how far to trust it is in [docs/backfill.md](docs/backfill.md).
 
 <!-- scorecard:start -->
-Last scored session: **2026-11-17** · 21 sessions of published cards · 158 sessions of rebuilt history.
+Last scored session: **2026-11-18** · 22 sessions of published cards · 158 sessions of rebuilt history.
 
 ### Published cards
 
 | Measure | Result |
 | --- | --- |
-| Setups published | 168 |
-| Triggered | 51% (85/168; 95% 43–58%) |
-| Filled after the retest | 56% (48/85; 95% 46–66%) |
+| Setups published | 176 |
+| Triggered | 50% (88/176; 95% 43–57%) |
+| Filled after the retest | 55% (48/88; 95% 44–64%) |
 | Hit T1 before the stop | 58% (28/48; 95% 44–71%) |
 | Stopped | 40% (19/48; 95% 27–54%) |
 | Reached T2 | 6% (3/48; 95% 2–17%) |
@@ -37,36 +37,36 @@ Last scored session: **2026-11-17** · 21 sessions of published cards · 158 ses
 | Option P&L, 1 contract (card / 5-min / T2) | -$148 / -$108 / +$399 over 31 trades |
 | Average best / worst move | +1.66R / -0.96R |
 | Median minutes to T1 | 19 |
-| Bias read right | 41% (34/83; 95% 31–52%) |
+| Bias read right | 40% (35/87; 95% 31–51%) |
 
 ### Last 20 published sessions
 
 | Measure | Result |
 | --- | --- |
 | Setups published | 160 |
-| Triggered | 51% (81/160; 95% 43–58%) |
-| Filled after the retest | 56% (45/81; 95% 45–66%) |
-| Hit T1 before the stop | 56% (25/45; 95% 41–69%) |
-| Stopped | 42% (19/45; 95% 29–57%) |
-| Reached T2 | 7% (3/45; 95% 2–18%) |
-| Average R, card exits | +0.53R |
-| Average R, 5-minute rule | +0.39R |
-| Average R, hold for T2 | +0.80R |
-| Total R (card / 5-min / T2) | +24.02R / +17.49R / +35.99R |
+| Triggered | 49% (79/160; 95% 42–57%) |
+| Filled after the retest | 54% (43/79; 95% 44–65%) |
+| Hit T1 before the stop | 56% (24/43; 95% 41–70%) |
+| Stopped | 42% (18/43; 95% 28–57%) |
+| Reached T2 | 7% (3/43; 95% 2–19%) |
+| Average R, card exits | +0.55R |
+| Average R, 5-minute rule | +0.36R |
+| Average R, hold for T2 | +0.85R |
+| Total R (card / 5-min / T2) | +23.42R / +15.70R / +36.61R |
 | Option P&L, 1 contract (card / 5-min / T2) | -$148 / -$108 / +$399 over 31 trades |
-| Average best / worst move | +1.63R / -0.99R |
-| Median minutes to T1 | 22 |
+| Average best / worst move | +1.64R / -0.99R |
+| Median minutes to T1 | 23 |
 | Bias read right | 39% (31/79; 95% 29–50%) |
 
 ### Rebuilt history, by bar size
 
 Cards re-picked from saved data with the card's own code (`tools/rebuild_cards.py`). Coarse bars miss many retest fills, so read fill and R numbers here as rough; the bias, trigger and day-range facts hold on any bar size. `reports/tier_check.json` measures the gap.
 
-| Measure | Published cards (19 Oct – 17 Nov) | Rebuilt, 2-min bars (4 May – 16 Oct) | Rebuilt, 60-min bars (4 Mar – 1 May) |
+| Measure | Published cards (19 Oct – 18 Nov) | Rebuilt, 2-min bars (4 May – 16 Oct) | Rebuilt, 60-min bars (4 Mar – 1 May) |
 | --- | --- | --- | --- |
-| Setups published | 168 | 925 | 331 |
-| Triggered | 51% (85/168; 95% 43–58%) | 51% (473/925; 95% 48–54%) | 44% (146/331; 95% 39–50%) |
-| Filled after the retest | 56% (48/85; 95% 46–66%) | 56% (267/473; 95% 52–61%) | 25% (37/146; 95% 19–33%) |
+| Setups published | 176 | 925 | 331 |
+| Triggered | 50% (88/176; 95% 43–57%) | 51% (473/925; 95% 48–54%) | 44% (146/331; 95% 39–50%) |
+| Filled after the retest | 55% (48/88; 95% 44–64%) | 56% (267/473; 95% 52–61%) | 25% (37/146; 95% 19–33%) |
 | Hit T1 before the stop | 58% (28/48; 95% 44–71%) | 43% (115/267; 95% 37–49%) | 65% (24/37; 95% 49–78%) |
 | Stopped | 40% (19/48; 95% 27–54%) | 51% (135/267; 95% 45–56%) | 14% (5/37; 95% 6–28%) |
 | Reached T2 | 6% (3/48; 95% 2–17%) | 5% (14/267; 95% 3–9%) | 0% (0/37; 95% 0–9%) |
@@ -77,7 +77,7 @@ Cards re-picked from saved data with the card's own code (`tools/rebuild_cards.p
 | Option P&L, 1 contract (card / 5-min / T2) | -$148 / -$108 / +$399 over 31 trades | – / – / – over 0 trades | – / – / – over 0 trades |
 | Average best / worst move | +1.66R / -0.96R | +1.51R / -0.96R | +2.31R / -0.91R |
 | Median minutes to T1 | 19 | 18 | – |
-| Bias read right | 41% (34/83; 95% 31–52%) | 40% (181/454; 95% 36–44%) | 40% (65/161; 95% 33–48%) |
+| Bias read right | 40% (35/87; 95% 31–51%) | 40% (181/454; 95% 36–44%) | 40% (65/161; 95% 33–48%) |
 
 Card score vs R (information coefficient), rebuilt history: 0.051; rank vs R: 0.044.
 
@@ -114,18 +114,18 @@ Card score vs R (information coefficient), rebuilt history: 0.051; rank vs R: 0.
 | <0.5 ATR | 983 | 40% (243/611; 95% 36–44%) | 57% (557/983; 95% 54–60%) | 45% (122/271; 95% 39–51%) | +0.35R |
 | >1 ATR | 47 | 55% (21/38; 95% 40–70%) | 6% (3/47; 95% 2–17%) | 0% (0/1; 95% 0–79%) | -1.32R |
 
-### 2026-11-17
+### 2026-11-18
 
 | Setup | Level → entry / stop / T1 / T2 | Result | R card | R 5-min | Option $ |
 | --- | --- | --- | --- | --- | --- |
-| NVDA call (#1, support) | 163.0 → 163.11 / 161.87 / 165.59 / 179.92 | no trigger | – | – | – |
-| NVDA put (#1, support) | 155.02 → 154.91 / 156.15 / 152.43 / 148.8 | target1 | +2.00R | -0.32R | +$110 |
-| TSLA call (#2, breakout) | 382.48 → 382.66 / 380.68 / 386.62 / 404.4 | no trigger | – | – | – |
-| TSLA put (#2, breakout) | 375.25 → 375.07 / 377.05 / 371.11 / 360.02 | stopped | -1.46R | -1.46R | -$154 |
-| AVGO call (#3, support) | 337.65 → 337.85 / 335.6 / 342.35 / 367.43 | stopped | -1.60R | -1.60R | -$161 |
-| AVGO put (#3, support) | 330.9 → 330.7 / 332.95 / 326.2 / 319.3 | failed before retest | – | – | – |
-| SPY call (#4, support) | 749.75 → 749.89 / 748.4 / 752.87 / 757.7 | no trigger | – | – | – |
-| SPY put (#4, support) | 738.1 → 737.96 / 739.45 / 734.98 / None | target1 | +2.00R | -0.48R | -$59 |
+| QQQ call (#1, breakout) | 662.02 → 662.22 / 660.02 / 666.62 / 672.15 | failed before retest | – | – | – |
+| QQQ put (#1, breakout) | 646.66 → 646.46 / 648.66 / 642.06 / None | no trigger | – | – | – |
+| NVDA call (#2, breakout) | 157.45 → 157.56 / 156.31 / 160.06 / 179.92 | failed before retest | – | – | – |
+| NVDA put (#2, breakout) | 148.8 → 148.69 / 149.94 / 146.19 / None | no trigger | – | – | – |
+| TSLA call (#3, breakout) | 382.27 → 382.45 / 380.51 / 386.33 / 404.4 | failed before retest | – | – | – |
+| TSLA put (#3, breakout) | 374.24 → 374.06 / 376.0 / 370.18 / 360.02 | no trigger | – | – | – |
+| SPY call (#4, support) | 738.38 → 738.52 / 736.97 / 741.62 / 749.79 | no trigger | – | – | – |
+| SPY put (#4, support) | 727.03 → 726.89 / 728.44 / 723.79 / None | no trigger | – | – | – |
 
 <!-- scorecard:end -->
 
