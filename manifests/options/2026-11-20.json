@@ -1,0 +1,2 @@
+{"2026-11-20-MSFT-call": {"expiry": "20261120", "chain": {"502.5": {"name": "MSFT_502.5C", "description": "MSFT NOV 20 '26 502.5 Call"}}},
+ "2026-11-20-MSFT-put": {"expiry": "20261120", "chain": {"495": {"name": "MSFT_495P", "description": "MSFT NOV 20 '26 495 Put"}}}}
